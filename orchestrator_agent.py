@@ -10,7 +10,7 @@ def read_text(file_name):
 
 
 def write_text(file_name, content):
-    """Write text into a file."""
+    """Write text to a file."""
     Path(file_name).write_text(content, encoding="utf-8")
 
 
@@ -22,7 +22,6 @@ def agent_1_english_to_french(source_text):
     translations = {
         "One for all and all for one": "Un pour tous, tous pour un"
     }
-
     return translations.get(source_text, source_text)
 
 
@@ -34,7 +33,6 @@ def agent_2_french_to_hebrew(french_text):
     translations = {
         "Un pour tous, tous pour un": "אחד בשביל כולם וכולם בשביל אחד"
     }
-
     return translations.get(french_text, french_text)
 
 
@@ -46,14 +44,13 @@ def agent_3_hebrew_to_english(hebrew_text):
     translations = {
         "אחד בשביל כולם וכולם בשביל אחד": "One for all and all for one"
     }
-
     return translations.get(hebrew_text, hebrew_text)
 
 
 def text_to_vector(text):
     """
     Converts text into a simple word-frequency vector.
-    This is a basic vector representation used for semantic comparison.
+    This vector representation is used for comparison.
     """
     words = re.findall(r"\w+", text.lower())
     return Counter(words)
@@ -62,9 +59,11 @@ def text_to_vector(text):
 def cosine_similarity(vector_1, vector_2):
     """
     Calculates cosine similarity between two text vectors.
-    Similarity close to 1 means the texts are very similar.
+    A similarity score close to 1 means the texts are very similar.
     """
-    common_words = set(vector_1.keys()) & set(vector_2.keys())
+    common_words = set(vector_1.keys()) & set(vector_2.keys()
+
+    )
 
     dot_product = sum(vector_1[word] * vector_2[word] for word in common_words)
 
@@ -110,7 +109,10 @@ def main():
     write_text("agent3_english.txt", final_english_text)
     print(f"Agent 3 output - English: {final_english_text}")
 
-    similarity, distance = compare_original_and_final(original_text, final_english_text)
+    similarity, distance = compare_original_and_final(
+        original_text,
+        final_english_text
+    )
 
     report = f"""Comparison Report
 
