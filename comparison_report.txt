@@ -1,0 +1,3 @@
+Comparison Report:
+The text contents of 'source_english.txt' and 'agent3_english.txt' are identical.
+Content: "One for all and all for one"
