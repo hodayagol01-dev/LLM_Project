@@ -1,3 +1,22 @@
-Comparison Report:
-The text contents of 'source_english.txt' and 'agent3_english.txt' are identical.
-Content: "One for all and all for one"
+Comparison Report
+
+Original English sentence:
+One for all and all for one
+
+Agent 1 - French translation:
+Un pour tous, tous pour un
+
+Agent 2 - Hebrew translation:
+אחד בשביל כולם וכולם בשביל אחד
+
+Agent 3 - Back to English:
+One for all and all for one
+
+Semantic similarity:
+1.0000
+
+Semantic distance:
+0.0000
+
+Conclusion:
+The final English sentence is semantically identical or very close to the original sentence.
