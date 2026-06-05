@@ -64,12 +64,25 @@ For more detailed information, please refer to:
 - [TODO Checklist](docs/TODO.md)
 
 ## Project Status
-**Current Phase:** Initial Development and Setup (using placeholder logic).
-- [x] Product Requirements Document (PRD) defined.
-- [x] Technical Implementation Plan (PLAN) defined.
-- [x] TODO checklist exists.
-- [x] README.md exists and is being maintained.
-- [x] Initial Python project skeleton (`src/`, `tests/`) is established.
-- [x] Placeholder agent flow runs successfully via `python3 main.py`.
-- [ ] Real Google API (Gmail, Calendar) integration is not yet implemented.
-**Important Note:** This project currently utilizes placeholder/demo logic for its core functionalities and does NOT perform actual Gmail or Calendar API calls. All interactions are simulated for development and testing purposes.
+**Current Phase:** Production Ready Integration.
+The AI Meeting Scheduler Agent has been fully integrated with Google Workspace APIs. The project now includes:
+
+- Real Google OAuth authentication using `auth_test.py`
+- Real Gmail API integration for reading inbox emails
+- Real Gmail API integration for sending reply emails
+- Real Gmail API integration for marking emails as processed/read
+- Real Google Calendar API integration for checking availability
+- Real Google Calendar API integration for creating events
+- Local `credentials.json` and `token.json` files are required but intentionally ignored by Git for security
+- The project includes integration test files:
+  - `auth_test.py`
+  - `gmail_read_test.py`
+  - `calendar_create_test.py`
+
+## How to Run
+1. Create a Google Cloud project.
+2. Enable Gmail API and Google Calendar API.
+3. Create OAuth Desktop credentials.
+4. Download `credentials.json` into the project root.
+5. Run `python3 auth_test.py` to create `token.json`.
+6. Run `python3 main.py`.
