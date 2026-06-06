@@ -81,6 +81,37 @@ The project also includes integration test files:
   * `gmail_read_test.py`
   * `calendar_create_test.py`
 
+
+## MCP Architecture
+
+This project now includes a dual Model Context Protocol (MCP) architecture in addition to the original direct implementation.
+
+The MCP architecture includes two parts:
+
+- `src/mcp_server.py` — MCP Server that exposes the project capabilities as tools.
+- `src/agent.py` — MCP Client Agent that connects to the server, discovers the tools, and runs the scheduling workflow.
+
+The MCP Server exposes tools for:
+
+- Fetching recent Gmail emails.
+- Parsing meeting requests.
+- Checking Google Calendar availability.
+- Creating Google Calendar events.
+- Sending reply emails.
+- Marking emails as processed.
+
+The MCP Client Agent runs an autonomous workflow:
+
+1. Fetch recent emails.
+2. Parse each email as a possible meeting request.
+3. Ask for clarification if required details are missing.
+4. Check calendar availability.
+5. Create a calendar event if the time slot is free.
+6. Send a confirmation or busy reply.
+7. Mark the email as processed.
+
+This separates tool execution from agent decision-making, following the MCP client/server architecture discussed in the course.
+
 ## How to Run
 
 1. Create a Google Cloud project.
