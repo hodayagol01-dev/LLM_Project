@@ -86,6 +86,19 @@ The system operates within the scope of a single Gmail account and its associate
 - `README.md` with setup instructions.
 
 ## Main Implementation Decision
-**Direct Google APIs vs. MCP:**
-While the Model Context Protocol (MCP) was discussed during the course as a standard for agent-tool communication, this project will utilize **direct Google APIs** for Gmail and Calendar.
-- **Reasoning:** Direct API integration provides more granular control over the filtering logic (e.g., specific labels and date ranges), simplifies the debugging process for this specific assignment, and avoids the overhead of setting up an MCP server for a single-agent utility.
+
+**Dual Implementation: Direct Google APIs + MCP Architecture**
+
+This project supports two implementation modes:
+
+1. **Legacy direct implementation**
+   - `main.py` runs the original direct workflow.
+   - The agent calls the Gmail, Calendar, and parsing services directly.
+
+2. **MCP client/server implementation**
+   - `src/mcp_server.py` runs as an MCP Server and exposes the project capabilities as tools.
+   - `src/agent.py` runs as an MCP Client Agent.
+   - The client discovers the server tools and calls them iteratively according to the task state.
+
+This design keeps the original working implementation while also demonstrating the MCP client/server architecture discussed in the course.
+
