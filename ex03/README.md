@@ -138,3 +138,80 @@ python -m src.agent
 ```
 
 In this mode, `src/agent.py` runs as the MCP Client Agent and connects to `src/mcp_server.py`, which exposes the Gmail, Calendar, and parsing tools.
+
+## Example Input / Output
+
+This section demonstrates how the AI Meeting Scheduler Agent behaves in a typical scenario.
+
+### Example Incoming Email
+
+```text
+Subject: Project Sync Meeting
+
+Hi,
+
+Can we schedule a project sync meeting tomorrow at 10:00?
+I would like to discuss the next steps for the assignment.
+
+Thanks,
+Dana
+```
+
+### Agent Interpretation
+
+```json
+{
+  "is_meeting_request": true,
+  "title": "Project Sync Meeting",
+  "date": "tomorrow",
+  "start_time": "10:00",
+  "missing_fields": ["end_time"]
+}
+```
+
+### Agent Action
+
+Because the email is missing an end time, the agent does not create a calendar event yet.
+
+Instead, it sends a clarification email asking for the missing details.
+
+### Example Agent Reply
+
+```text
+Hi,
+
+Thank you for your message. I can help schedule this meeting, but I am missing some details.
+
+Missing details: end_time
+
+Please send the missing information and I will continue the scheduling process.
+
+Best,
+AI Meeting Scheduler Agent
+```
+
+### Calendar Behavior
+
+If all required details are provided and the requested time slot is available, the agent creates a Google Calendar event and sends a confirmation reply.
+
+If the requested time slot is busy, the agent does not create an event and asks the sender to suggest another time.
+
+### Tested MCP Behavior
+
+This example is based on the tested agent workflow. Sensitive personal details were removed.
+
+Observed behavior:
+
+```text
+[MCP CLIENT] Available tools:
+fetch_recent_emails_tool
+parse_meeting_request_tool
+check_calendar_availability_tool
+create_calendar_event_tool
+send_reply_email_tool
+mark_email_as_processed_tool
+
+[AGENT] Missing fields detected
+[AGENT] Sending clarification email
+[AGENT] Email marked as processed
+```
