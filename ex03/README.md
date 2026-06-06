@@ -125,3 +125,16 @@ This separates tool execution from agent decision-making, following the MCP clie
 
 Do not commit `credentials.json`, `token.json`, `.env`, API keys, client secrets, or tokens to GitHub.
 These files are required only for local execution and are ignored by `.gitignore`.
+
+### MCP Client/Server Run
+
+The project also includes an MCP-based implementation.
+
+To run it, use the Python virtual environment created for this project:
+
+```bash
+source .venv/bin/activate
+python -m src.agent
+```
+
+In this mode, `src/agent.py` runs as the MCP Client Agent and connects to `src/mcp_server.py`, which exposes the Gmail, Calendar, and parsing tools.
