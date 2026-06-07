@@ -1,43 +1,111 @@
-# LLM Multi-Agent Translation Chain
+# LLM Course Project
 
-This project demonstrates a multi-agent LLM workflow.
+This repository contains assignments for the LLM course.
 
-The system starts with an English sentence, passes it through three translation agents, and then compares the final English sentence to the original sentence.
+Each assignment is organized in a separate folder in order to keep the projects clear, readable, and easy to evaluate.
 
-## Workflow
+---
 
-1. Agent 1: English to French
-2. Agent 2: French to Hebrew
-3. Agent 3: Hebrew to English
-4. Comparison Tool: compares the original English sentence with the final English sentence
+## Repository Structure
 
-## Input
+```text
+LLM_Project/
+├── ex02/
+├── ex03/
+└── README.md
+```
 
-source_english.txt
+---
 
-## Outputs
+## Assignment 2 – Multi-Agent Translation Chain
 
-agent1_french.txt  
-agent2_hebrew.txt  
-agent3_english.txt  
-comparison_report.txt
+Folder:
 
-## Result
+```text
+ex02/
+```
 
-Original sentence:
-One for all and all for one
+Assignment 2 implements a multi-agent translation chain.
 
-Final sentence:
-One for all and all for one
+The translation flow is:
 
-Semantic Distance:
-0
+```text
+English → French → Hebrew → English
+```
 
-## Course Concepts
+The project includes:
 
-This project demonstrates:
-- AI agents
-- Skills
-- Orchestration
-- Multi-step LLM workflow
-- Semantic comparison
+- Dedicated skill files for each translation step.
+- An orchestrator script that manages the translation chain.
+- Input and output text files.
+- A semantic comparison report.
+- Documentation explaining the workflow.
+
+Main files:
+
+```text
+ex02/orchestrator_agent.py
+ex02/source_english.txt
+ex02/agent1_french_skill.md
+ex02/agent2_hebrew_skill.md
+ex02/agent3_english_skill.md
+ex02/comparison_skill.md
+ex02/comparison_report.txt
+ex02/README.md
+```
+
+For details, see:
+
+```text
+ex02/README.md
+```
+
+---
+
+## Assignment 3 – AI Meeting Scheduler Agent
+
+Folder:
+
+```text
+ex03/
+```
+
+Assignment 3 implements an AI Meeting Scheduler Agent.
+
+The project reads Gmail messages, identifies meeting requests, checks Google Calendar availability, creates calendar events when possible, and replies to the sender.
+
+The project includes:
+
+- MCP Server implementation.
+- MCP Client Agent implementation.
+- Gmail and Google Calendar integration.
+- Prompt engineering and experiments documentation.
+- Input/output examples and tested behavior documentation.
+
+Main files:
+
+```text
+ex03/src/mcp_server.py
+ex03/src/agent.py
+ex03/main.py
+ex03/requirements.txt
+ex03/EXPERIMENTS.md
+ex03/README.md
+```
+
+For details, see:
+
+```text
+ex03/README.md
+```
+
+---
+
+## Notes
+
+The assignments are separated into different folders so each submission can be reviewed independently.
+
+- `ex02` contains the translation-chain assignment.
+- `ex03` contains the meeting-scheduler assignment with MCP architecture.
+
+Sensitive local files such as credentials, tokens, and environment files should not be committed to GitHub.
