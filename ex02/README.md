@@ -62,6 +62,7 @@ ex02/
 ├── agent2_hebrew_skill.md
 ├── agent3_english_skill.md
 ├── comparison_skill.md
+├── ANALYSIS.md
 ├── orchestrator_agent.py
 └── README.md
 ```
@@ -77,6 +78,7 @@ ex02/
 - `agent2_hebrew_skill.md` – the French-to-Hebrew translation skill.
 - `agent3_english_skill.md` – the Hebrew-to-English translation skill.
 - `comparison_skill.md` – the semantic comparison skill.
+- `ANALYSIS.md` – research and analysis documentation explaining the semantic comparison, observations, limitations, and future improvements.
 - `orchestrator_agent.py` – the script that manages the full translation chain.
 
 ---
@@ -200,6 +202,7 @@ The main analytical questions were:
 
 The comparison stage was added to make the assignment analytical, not only technical.
 
+A detailed research and analysis document is available in `ANALYSIS.md`.
 ---
 
 ## Design Decisions
