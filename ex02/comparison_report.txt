@@ -12,11 +12,21 @@ Agent 2 - Hebrew translation:
 Agent 3 - Back to English:
 One for all and all for one
 
-Semantic similarity:
+Execution Modes:
+Agent 1: fallback
+Agent 2: fallback
+Agent 3: fallback
+Comparison Agent: fallback
+
+Vector-Based Semantic Similarity:
 1.0000
 
-Semantic distance:
+Vector-Based Semantic Distance:
 0.0000
 
+Gemini Semantic Evaluation:
+Gemini comparison was unavailable due to quota or API limitations.
+
 Conclusion:
-The final English sentence is semantically identical or very close to the original sentence.
+The orchestrator first attempts to run each specialized agent through Gemini CLI using the relevant skill file.
+If Gemini CLI is unavailable due to quota, API, or connectivity limitations, the system uses a deterministic fallback so the full workflow remains reproducible.
