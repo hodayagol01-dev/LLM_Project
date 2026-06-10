@@ -55,7 +55,7 @@ python3 ex04/src/compile_pdf.py
 
 ## Expected Output
 
-The compilation process is expected to produce a PDF file (e.g., `main.pdf`) in the root of the `ex04` directory. This PDF will be formatted according to `custom-academic-template.cls` and will incorporate references from `references.bib`.
+The compilation process produces the final PDF file: `main.pdf`, located in the root of the `ex04` directory. The current compiled PDF contains 31 pages and is formatted according to `custom-academic-template.cls`.
 
 ## Current Limitations
 
