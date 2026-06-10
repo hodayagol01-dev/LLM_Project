@@ -2,7 +2,7 @@
 
 \addbibresource{references.bib}
 
-\title{Assignment 04: Professional PDF Generation}
+\title{Assignment 04: Agentic PDF Generation Framework}
 \author{Gemini CLI Agent}
 \date{\today}
 
@@ -13,17 +13,31 @@
 \newpage
 
 \section{Introduction}
-This document serves as the initial skeleton for Assignment 04. It demonstrates the use of a custom class file and LuaLaTeX for high-quality document generation.
+This document outlines the architecture for Assignment 04, focusing on autonomous document generation. By integrating LaTeX with agentic workflows, we aim to bridge the gap between structured technical writing and intelligent automation.
+
+\section{Assignment Context}
+The objective is to establish an end-to-end pipeline capable of generating academic-grade PDFs. This requires not only typesetting capabilities but also logical control over document structure and content verification.
+
+\section{Technical Foundation}
+\subsection{LuaLaTeX and CLS Templates}
+We leverage LuaLaTeX for its advanced scripting capabilities, allowing for programmatic manipulation of the document model. The project utilizes a custom \texttt{custom-academic-template.cls} to ensure stylistic consistency and adherence to academic formatting standards \cite{latex_companion}.
+
+\subsection{Agent Orchestration and Skills}
+Content generation is mediated by an orchestrator agent that delegates specialized tasks to defined ``skills''. Skills act as modular agents, ensuring clean separation of concerns between content creation, compilation, and quality assurance.
 
 \section{Methodology}
-The project utilizes a multi-agent orchestration approach to handle content generation, LaTeX building, and quality assurance.
+\subsection{QA Workflow}
+Our QA process employs a multi-faceted approach, checking document structure, citation integrity, and language quality. This ensures that the generated output meets the rigors of formal documentation.
 
-\subsection{Agent Roles}
-Various agents are assigned specific tasks, including writing, building, and QA.
+\section{Repository Structure}
+The project follows a modular organization:
+\begin{itemize}
+    \item \texttt{src/}: Core logic (orchestrator, compilation, QA).
+    \item \texttt{skills/}: Declarative agent capabilities.
+    \item \texttt{assets/}: External resources (images, graphs).
+\end{itemize}
 
 \section{Results}
-In this section, we present a summary of our findings.
-
 \begin{table}[h]
     \centering
     \caption{Project Components}
@@ -40,8 +54,6 @@ In this section, we present a summary of our findings.
 \end{table}
 
 \section{Visualizations}
-Below is a placeholder for a figure.
-
 \begin{figure}[h]
     \centering
     \fbox{Figure Placeholder}
@@ -49,8 +61,11 @@ Below is a placeholder for a figure.
     \label{fig:placeholder}
 \end{figure}
 
+\section{Reproducibility, Limitations, and Future Work}
+While the current implementation provides a robust skeleton, reproducibility relies on specific environment configurations. Limitations currently include manual intervention for complex layout adjustments. Future improvements will focus on fully automated asset generation and dynamic bibliography management.
+
 \section{Conclusion}
-The framework is now in place for professional PDF generation as required by the assignment guidelines \cite{latex_companion}.
+This assignment demonstrates the viability of agent-based document generation \cite{latex_companion}. The proposed framework offers a scalable path for automating high-quality academic publications.
 
 \printbibliography
 
