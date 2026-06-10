@@ -1,6 +1,6 @@
 # LLM Course Project
 
-This repository contains assignments for the LLM course.
+This is the main README file for the LLM course.
 
 Each assignment is organized in a separate folder in order to keep the projects clear, readable, and easy to evaluate.
 
@@ -100,6 +100,35 @@ ex03/README.md
 ```
 
 ---
+
+### Assignment 04: Agentic PDF Generation
+
+This assignment focuses on agentic PDF generation using LaTeX, LuaLaTeX, a custom CLS template, Skills, and QA orchestration.
+
+The `ex04` directory includes the following components:
+- `PRD.md`
+- `PLAN.md`
+- `TODO.md`
+- `README.md`
+- `main.tex`
+- `custom-academic-template.cls`
+- `references.bib`
+- `skills/`
+- `src/`
+- `logs/`
+- `assets/`
+- `screenshots/`
+
+Key functionalities include:
+- `qa_check.py`: Validates the presence of required files and folders for the assignment.
+- `compile_pdf.py`: Prepares and compiles the PDF using LuaLaTeX.
+
+**Note:** Local compilation currently requires LuaLaTeX to be installed on the machine.
+
+This project builds upon previous feedback by incorporating clearer setup instructions, comprehensive QA logs, and detailed documentation.
+
+---
+
 
 ## Notes
 
