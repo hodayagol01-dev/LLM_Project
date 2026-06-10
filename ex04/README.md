@@ -66,3 +66,21 @@ The compilation process is expected to produce a PDF file (e.g., `main.pdf`) in 
 -   Integrate alternative PDF compilation methods or provide clearer error messages for compilation failures.
 -   Expand QA checks to cover more aspects of document quality and correctness.
 -   Develop content generation capabilities using the skills defined in the `skills/` directory.
+
+## Improvements Based on Assignment 02 Feedback
+
+The feedback received for Assignment 02 highlighted two main areas for improvement: stronger code documentation and a more explicit evaluation process.
+
+Assignment 04 directly addresses these points through the following improvements:
+
+- A detailed root `README.md` that explains the assignment context and submission structure.
+- A dedicated `ex04/README.md` that documents the goal, repository structure, setup, QA, compilation workflow, and expected output.
+- Mandatory planning files: `PRD.md`, `PLAN.md`, and `TODO.md`.
+- A reproducible LaTeX workflow using `main.tex`, `custom-academic-template.cls`, and LuaLaTeX.
+- A final compiled PDF: `main.pdf`.
+- A QA script: `src/qa_check.py`, which validates the required files and folders.
+- A compilation script: `src/compile_pdf.py`, which runs LuaLaTeX in a repeatable way.
+- Logs in the `logs/` directory to document generation and QA activity.
+- Reusable Skills in the `skills/` directory to describe the agentic workflow.
+
+These additions were included to make the submission easier to inspect, reproduce, and evaluate by both a human instructor and an automatic grading agent.
