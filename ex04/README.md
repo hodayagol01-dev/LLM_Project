@@ -55,7 +55,7 @@ python src/compile_pdf.py
 
 ## Expected Output
 
-The compilation process is expected to produce a PDF file (e.g., `document.pdf`) in the root of the `ex04` directory. This PDF will be formatted according to `custom-academic-template.cls` and will incorporate references from `references.bib`.
+The compilation process is expected to produce a PDF file (e.g., `main.pdf`) in the root of the `ex04` directory. This PDF will be formatted according to `custom-academic-template.cls` and will incorporate references from `references.bib`.
 
 ## Current Limitations
 
