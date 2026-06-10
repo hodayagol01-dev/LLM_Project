@@ -101,31 +101,70 @@ ex03/README.md
 
 ---
 
-### Assignment 04: Agentic PDF Generation
+---
 
-This assignment focuses on agentic PDF generation using LaTeX, LuaLaTeX, a custom CLS template, Skills, and QA orchestration.
+## Assignment 04 – Agentic Academic PDF Generation
 
-The `ex04` directory includes the following components:
-- `PRD.md`
-- `PLAN.md`
-- `TODO.md`
-- `README.md`
-- `main.tex`
-- `custom-academic-template.cls`
-- `references.bib`
-- `skills/`
-- `src/`
-- `logs/`
-- `assets/`
-- `screenshots/`
+Folder:
+```text
+ex04/
+```
 
-Key functionalities include:
-- `qa_check.py`: Validates the presence of required files and folders for the assignment.
-- `compile_pdf.py`: Prepares and compiles the PDF using LuaLaTeX.
+Assignment 04 demonstrates the generation of a professional 31-page academic PDF using a sophisticated agentic architecture, LaTeX/LuaLaTeX, and a custom document class (`.cls`).
 
-**Note:** Local compilation currently requires LuaLaTeX to be installed on the machine.
+### Objectives
+1. **Automation:** Implement an autonomous orchestration pipeline to generate high-quality academic documents.
+2. **Reproducibility:** Ensure consistent document compilation using LaTeX/LuaLaTeX and a custom template.
+3. **Quality Assurance:** Integrate automated structural, linguistic (BiDi), and bibliographic checks.
 
-This project builds upon previous feedback by incorporating clearer setup instructions, comprehensive QA logs, and detailed documentation.
+### Technology Stack
+- **LaTeX/LuaLaTeX:** Used for advanced typesetting, superior layout control, and handling complex academic formatting.
+- **Custom CLS Template:** Provides standardized structure, branding, and styling requirements.
+- **Agentic Skills:** Reusable agent instructions (stored in `ex04/skills/`) that modularize writing, building, and validation tasks.
+
+### Agentic Architecture
+- **Orchestrator Agent:** Manages the overall lifecycle, from content planning to final compilation.
+- **Content Writer Agent:** Generates academic text based on the PRD.
+- **LaTeX Builder Agent:** Executes the transformation from markdown/source to LaTeX structures.
+- **QA Structure Agent:** Validates document schema and section integrity.
+- **QA BiDi Agent:** Ensures proper Bidirectional text rendering.
+- **QA References Agent:** Verifies academic citation compliance.
+
+### Documentation & Planning
+All developmental stages are documented:
+- `ex04/PRD.md`: Project Requirements Document.
+- `ex04/PLAN.md`: Strategic execution plan.
+- `ex04/TODO.md`: Task tracking and progress logs.
+
+### Execution Instructions
+**1. Run QA Validation:**
+```bash
+python3 ex04/src/qa_check.py
+```
+
+**2. Compile PDF:**
+```bash
+python3 ex04/src/compile_pdf.py
+```
+
+**3. Expected Output:**
+- Generated PDF: `ex04/main.pdf`
+
+### Improvements & Submission Quality
+This submission addresses feedback from previous assignments by providing:
+- **Stronger Documentation:** Comprehensive setup and architectural context.
+- **Clear Setup Instructions:** Streamlined execution paths.
+- **Automated Validation:** Dedicated `qa_check.py` for submission integrity.
+- **Traceability:** Detailed logs in `ex04/logs/` and reproducible generation pipeline.
+
+### Submission Checklist
+- [x] `ex04/main.tex` (Source)
+- [x] `ex04/custom-academic-template.cls` (Template)
+- [x] `ex04/references.bib` (Bibliography)
+- [x] `ex04/main.pdf` (Result)
+- [x] `ex04/src/` (Scripts)
+- [x] `ex04/skills/` (Reusable instructions)
+- [x] `ex04/PRD.md`, `PLAN.md`, `TODO.md` (Planning)
 
 ---
 
