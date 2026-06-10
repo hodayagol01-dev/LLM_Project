@@ -1,6 +1,6 @@
-# Ex04: LaTeX Document Generation
+# Ex04: Agentic LaTeX PDF Generation
 
-This repository contains the skeleton for a LaTeX document generation project. The goal is to programmatically generate a technical document using LaTeX, including academic references and custom styling.
+This folder contains the final implementation for Assignment 04: an agentic LaTeX PDF generation project. The goal is to generate a professional academic PDF using LaTeX, LuaLaTeX, a custom CLS template, reusable Skills, QA checks, logs, and reproducible GitHub documentation.
 
 ## Repository Structure
 
@@ -41,15 +41,15 @@ This repository contains the skeleton for a LaTeX document generation project. T
 
 Quality Assurance checks can be performed using the `qa_check.py` script:
 ```bash
-python src/qa_check.py
+python3 ex04/src/qa_check.py
 ```
-This script will validate various aspects of the generated document.
+This script validates that the required Assignment 04 files and folders exist, including the planning files, LaTeX source, CLS template, Skills, logs, assets, and screenshots directory.
 
 ## Compiling with LuaLaTeX
 
 To compile the LaTeX document into a PDF, navigate to the `ex04` directory and run the compilation script:
 ```bash
-python src/compile_pdf.py
+python3 ex04/src/compile_pdf.py
 ```
 **Note:** This command requires LuaLaTeX to be installed and accessible in your system's PATH.
 
