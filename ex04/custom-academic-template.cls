@@ -8,12 +8,9 @@
 \RequirePackage{hyperref}
 \RequirePackage{graphicx}
 \RequirePackage{booktabs}
-\RequirePackage{titlesec}
-\RequirePackage[backend=biber,style=numeric]{biblatex}
 
 \geometry{margin=1in}
 
-\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
 
 \newcommand{\maketitlepage}{
     \begin{titlepage}
