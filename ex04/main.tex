@@ -7,16 +7,15 @@
 % are needed, they would ideally be included in the custom-academic-template.cls.
 % We will proceed assuming the .cls file supports necessary features for this content.
 
-	itle{Agentic PDF Generation with LaTeX, LuaLaTeX, CLS Templates, Skills, QA Orchestration, and Reproducible GitHub Submission}
+	\title{Agentic PDF Generation with LaTeX, LuaLaTeX, CLS Templates, Skills, QA Orchestration, and Reproducible GitHub Submission}
 \author{Gemini CLI Agent}
 \date{June 10, 2026} % Updated date to reflect session context
 
 \begin{document}
 
 \maketitlepage
-	ableofcontents
-
-ewpage
+	\tableofcontents
+\newpage
 
 % 1. Assignment Requirements
 \section{Assignment Requirements and Objectives}
@@ -132,8 +131,7 @@ The QA Structure Agent is dedicated to verifying the structural integrity and lo
 Key functions of the QA Structure Agent include:
 \begin{itemize}
     \item 	extbf{Section and Subsection Validation:} It checks that all intended sections and subsections are present, correctly numbered, and logically ordered according to the assignment requirements and academic best practices.
-    \item 	extbf{Page Break Verification:} The agent assesses the placement and appropriateness of page breaks, particularly those explicitly inserted using 	exttt{
-ewpage}. It verifies that major sections are not awkwardly split or that new major parts begin on new pages as intended.
+    \item 	extbf{Page Break Verification:} The agent assesses the placement and appropriateness of page breaks, particularly those explicitly inserted using 	exttt{\newpage}. It verifies that major sections are not awkwardly split or that new major parts begin on new pages as intended.
     \item 	extbf{List and Enumeration Checks:} It may verify the correct formatting and numbering of lists, itemizations, and enumerations within the document.
     \item 	extbf{Table and Figure Placement:} The agent can check that tables and figures are correctly placed, captioned, and labeled, and that references to them within the text are accurate.
     \item 	extbf{Table of Contents Consistency:} It confirms that the Table of Contents accurately reflects the structure and pagination of the document's main body.
@@ -380,10 +378,8 @@ Potential areas for future development include:
 \end{itemize}
 These advancements would push the boundaries of automated document generation, making it a more powerful tool for researchers, students, and professionals alike.
 
-% Appendices - Use 
-ewpage to separate major sections
-
-ewpage
+% Appendices - Use \newpage to separate major sections
+\newpage
 \appendix
 
 % 21. Appendix A: Agent Prompts
@@ -416,8 +412,7 @@ Analyze the generated LaTeX document 'ex04/main.tex' and its compilation log 'ex
 Verify the following:
 - All required sections (1-24) and subsections are present.
 - Sections are in the correct order as per assignment requirements.
-- Page breaks (	exttt{
-ewpage}) are used appropriately between major sections (e.g., before Appendices).
+- Page breaks (	exttt{\newpage}) are used appropriately between major sections (e.g., before Appendices).
 - The Table of Contents accurately reflects the document's structure and pagination.
 Report any structural anomalies, missing elements, or incorrect ordering.
 \end{verbatim}
@@ -431,8 +426,7 @@ This detailed checklist is used by the QA agents to systematically evaluate the 
     \item [ ] Section titles match assignment list.
     \item [ ] Section order is correct.
     \item [ ] Subsections are appropriately nested and labeled.
-    \item [ ] 	exttt{
-ewpage} usage is consistent with logical breaks.
+    \item [ ] 	exttt{\newpage} usage is consistent with logical breaks.
     \item [ ] Table of Contents (ToC) is generated and accurate (sections, pagination).
     \item [ ] Page numbers are consistent and sequential.
     \item [ ] Document begins with title page and ToC.
