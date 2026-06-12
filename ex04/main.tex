@@ -7,15 +7,15 @@
 % are needed, they would ideally be included in the custom-academic-template.cls.
 % We will proceed assuming the .cls file supports necessary features for this content.
 
-	\t\title{Agentic PDF Generation with LaTeX, LuaLaTeX, CLS Templates, Skills, QA Orchestration, and Reproducible GitHub Submission}
+	\title{Agentic PDF Generation with LaTeX, LuaLaTeX, CLS Templates, Skills, QA Orchestration, and Reproducible GitHub Submission}
 \author{Gemini CLI Agent}
 \date{June 10, 2026} % Updated date to reflect session context
 
 \begin{document}
 
 \maketitlepage
-	\t\tableofcontents
-\n\newpage
+	\tableofcontents
+\newpage
 
 % 1. Assignment Requirements
 \section{Assignment Requirements and Objectives}
@@ -131,7 +131,7 @@ The QA Structure Agent is dedicated to verifying the structural integrity and lo
 Key functions of the QA Structure Agent include:
 \begin{itemize}
     \item 	\textbf{Section and Subsection Validation:} It checks that all intended sections and subsections are present, correctly numbered, and logically ordered according to the assignment requirements and academic best practices.
-    \item 	\textbf{Page Break Verification:} The agent assesses the placement and appropriateness of page breaks, particularly those explicitly inserted using 	\texttt{\n\newpage}. It verifies that major sections are not awkwardly split or that new major parts begin on new pages as intended.
+    \item 	\textbf{Page Break Verification:} The agent assesses the placement and appropriateness of page breaks, particularly those explicitly inserted using 	\texttt{\newpage}. It verifies that major sections are not awkwardly split or that new major parts begin on new pages as intended.
     \item 	\textbf{List and Enumeration Checks:} It may verify the correct formatting and numbering of lists, itemizations, and enumerations within the document.
     \item 	\textbf{Table and Figure Placement:} The agent can check that tables and figures are correctly placed, captioned, and labeled, and that references to them within the text are accurate.
     \item 	\textbf{Table of Contents Consistency:} It confirms that the Table of Contents accurately reflects the structure and pagination of the document's main body.
@@ -267,7 +267,7 @@ LaTeX compilation, especially with sophisticated engines like LuaLaTeX and custo
 
 Common types of LaTeX compilation errors include:
 \begin{itemize}
-    \item \t\textbf{Syntax Errors:} Incorrect LaTeX commands, missing braces, unmatched environments, unsafe inline examples, or typos in commands.
+    \item \textbf{Syntax Errors:} Incorrect LaTeX commands, missing braces, unmatched environments, unsafe inline examples, or typos in commands.
     \item 	\textbf{Undefined Control Sequences:} Using commands that are not recognized, often due to missing packages or typos.
     \item 	\textbf{Missing Files:} The compiler cannot find required files, such as images, bibliography data, or custom style files.
     \item 	\textbf{Package Conflicts:} Incompatible packages loaded into the document, leading to unpredictable behavior or outright failure.
@@ -378,8 +378,8 @@ Potential areas for future development include:
 \end{itemize}
 These advancements would push the boundaries of automated document generation, making it a more powerful tool for researchers, students, and professionals alike.
 
-% Appendices - Use \n\newpage to separate major sections
-\n\newpage
+% Appendices - Use \newpage to separate major sections
+\newpage
 \appendix
 
 % 21. Appendix A: Agent Prompts
@@ -412,7 +412,7 @@ Analyze the generated LaTeX document 'ex04/main.tex' and its compilation log 'ex
 Verify the following:
 - All required sections (1-24) and subsections are present.
 - Sections are in the correct order as per assignment requirements.
-- Page breaks (	\texttt{\n\newpage}) are used appropriately between major sections (e.g., before Appendices).
+- Page breaks (	\texttt{\newpage}) are used appropriately between major sections (e.g., before Appendices).
 - The Table of Contents accurately reflects the document's structure and pagination.
 Report any structural anomalies, missing elements, or incorrect ordering.
 \end{verbatim}
@@ -426,7 +426,7 @@ This detailed checklist is used by the QA agents to systematically evaluate the 
     \item [ ] Section titles match assignment list.
     \item [ ] Section order is correct.
     \item [ ] Subsections are appropriately nested and labeled.
-    \item [ ] 	\texttt{\n\newpage} usage is consistent with logical breaks.
+    \item [ ] 	\texttt{\newpage} usage is consistent with logical breaks.
     \item [ ] Table of Contents (ToC) is generated and accurate (sections, pagination).
     \item [ ] Page numbers are consistent and sequential.
     \item [ ] Document begins with title page and ToC.
@@ -597,27 +597,27 @@ The development of this agentic PDF generation system for Assignment 04 is signi
 \subsection{From Basic Agentic Workflows (e.g., Assignment 02)}
 Assignment 02, focusing on foundational agentic interactions, provided initial insights into the complexities of prompt engineering and inter-agent communication.
 \begin{itemize}
-    \item \t\textbf{Prompt Sensitivity and Specificity:} A primary lesson was the extreme sensitivity of agent output to prompt wording. Vague or ambiguous instructions consistently led to suboptimal or irrelevant responses. This underscored the necessity for hyper-specific and constrained prompts, a principle directly applied in the design of the Content Writer Agent's prompts for Assignment 04 (see Appendix A).
-    \item \t\textbf{Iterative Refinement of Agent Behavior:} Early experiences demonstrated that achieving desired agent behavior is rarely a one-shot process. It requires continuous observation of agent outputs, identification of deviations, and iterative refinement of prompts or underlying agent logic. This led to the explicit inclusion of feedback loops and QA stages in the current orchestrator design.
-    \item \t\textbf{Managing Context Window Limitations:} Initial attempts often struggled with agents forgetting previous turns or exceeding context window limits. This highlighted the importance of designing agents to process information efficiently and the orchestrator to strategically manage the flow of context, avoiding redundant information.
+    \item \textbf{Prompt Sensitivity and Specificity:} A primary lesson was the extreme sensitivity of agent output to prompt wording. Vague or ambiguous instructions consistently led to suboptimal or irrelevant responses. This underscored the necessity for hyper-specific and constrained prompts, a principle directly applied in the design of the Content Writer Agent's prompts for Assignment 04 (see Appendix A).
+    \item \textbf{Iterative Refinement of Agent Behavior:} Early experiences demonstrated that achieving desired agent behavior is rarely a one-shot process. It requires continuous observation of agent outputs, identification of deviations, and iterative refinement of prompts or underlying agent logic. This led to the explicit inclusion of feedback loops and QA stages in the current orchestrator design.
+    \item \textbf{Managing Context Window Limitations:} Initial attempts often struggled with agents forgetting previous turns or exceeding context window limits. This highlighted the importance of designing agents to process information efficiently and the orchestrator to strategically manage the flow of context, avoiding redundant information.
 \end{itemize}
 
 \subsection{From API Integration and Service Orchestration (e.g., Assignment 03)}
 Assignment 03, involving the integration with external APIs and the orchestration of more complex service flows, contributed valuable lessons in system reliability, error handling, and modularity.
 \begin{itemize}
-    \item \t\textbf{Robust Error Handling in External Interactions:} Interacting with external services (like Gmail or Calendar APIs) inevitably exposed the system to network failures, API rate limits, and unexpected response formats. This reinforced the need for comprehensive error handling mechanisms, graceful degradation, and retry logic within agent interactions. The LaTeX Builder Agent's error handling for compilation (Appendix C) directly benefits from this experience.
-    \item \t\textbf{Modularity for Maintainability and Testability:} Building systems with distinct, loosely coupled components (e.g., separate Gmail and Calendar services) proved critical for isolating bugs and facilitating independent development. This lesson is reflected in the modular design of agents and skills in Assignment 04, where each skill is a self-contained unit.
-    \item \t\textbf{Importance of Environment Configuration:} Ensuring consistent API keys, environment variables, and dependency installations (e.g., \t\texttt{requirements.txt}) was a recurring challenge. This led to a stronger emphasis on detailed setup and compilation workflows (Section 15) and clear repository documentation (Appendix D) for Assignment 04.
-    \item \t\textbf{Security Best Practices:} Handling sensitive credentials (API keys, tokens) necessitated strict adherence to security protocols, such as using environment variables and avoiding hardcoding. This principle is implicitly embedded in the design, ensuring that sensitive information is never exposed in logs or source code.
+    \item \textbf{Robust Error Handling in External Interactions:} Interacting with external services (like Gmail or Calendar APIs) inevitably exposed the system to network failures, API rate limits, and unexpected response formats. This reinforced the need for comprehensive error handling mechanisms, graceful degradation, and retry logic within agent interactions. The LaTeX Builder Agent's error handling for compilation (Appendix C) directly benefits from this experience.
+    \item \textbf{Modularity for Maintainability and Testability:} Building systems with distinct, loosely coupled components (e.g., separate Gmail and Calendar services) proved critical for isolating bugs and facilitating independent development. This lesson is reflected in the modular design of agents and skills in Assignment 04, where each skill is a self-contained unit.
+    \item \textbf{Importance of Environment Configuration:} Ensuring consistent API keys, environment variables, and dependency installations (e.g., \texttt{requirements.txt}) was a recurring challenge. This led to a stronger emphasis on detailed setup and compilation workflows (Section 15) and clear repository documentation (Appendix D) for Assignment 04.
+    \item \textbf{Security Best Practices:} Handling sensitive credentials (API keys, tokens) necessitated strict adherence to security protocols, such as using environment variables and avoiding hardcoding. This principle is implicitly embedded in the design, ensuring that sensitive information is never exposed in logs or source code.
 \end{itemize}
 
 \subsection{General Insights for Agentic System Development}
 Beyond specific assignments, broader lessons emerged regarding the nature of agentic systems.
 \begin{itemize}
-    \item \t\textbf{The Orchestrator as the Central Intelligence:} The orchestrator's role evolved from a simple task dispatcher to a sophisticated manager of goals, dependencies, and recovery strategies. Its ability to dynamically adapt to unforeseen circumstances is crucial.
-    \item \t\textbf{Validation as a Continuous Process:} Relying solely on final output validation is insufficient. Continuous, incremental validation (e.g., through QA agents after each major step) helps identify and rectify issues early, reducing debugging costs. This is evident in the detailed QA checklists (Appendix B) and the integration of QA agents throughout the workflow.
-    \item \t\textbf{Reproducibility as a Design Goal:} From the outset, designing for reproducibility (consistent environments, clear version control, detailed documentation) became a non-negotiable requirement rather than an afterthought. This permeates the entire Assignment 04 project.
-    \item \t\textbf{Human-in-the-Loop Considerations:} While aiming for autonomy, recognizing when human intervention is necessary (e.g., for complex error resolution or creative decisions) is vital. Agents should be designed to escalate issues with rich diagnostic information.
+    \item \textbf{The Orchestrator as the Central Intelligence:} The orchestrator's role evolved from a simple task dispatcher to a sophisticated manager of goals, dependencies, and recovery strategies. Its ability to dynamically adapt to unforeseen circumstances is crucial.
+    \item \textbf{Validation as a Continuous Process:} Relying solely on final output validation is insufficient. Continuous, incremental validation (e.g., through QA agents after each major step) helps identify and rectify issues early, reducing debugging costs. This is evident in the detailed QA checklists (Appendix B) and the integration of QA agents throughout the workflow.
+    \item \textbf{Reproducibility as a Design Goal:} From the outset, designing for reproducibility (consistent environments, clear version control, detailed documentation) became a non-negotiable requirement rather than an afterthought. This permeates the entire Assignment 04 project.
+    \item \textbf{Human-in-the-Loop Considerations:} While aiming for autonomy, recognizing when human intervention is necessary (e.g., for complex error resolution or creative decisions) is vital. Agents should be designed to escalate issues with rich diagnostic information.
 \end{itemize}
 These accumulated lessons from previous assignments have profoundly influenced the design and implementation of the current agentic PDF generation system, contributing to its robustness, maintainability, and ability to meet the stringent academic requirements.
 
@@ -628,28 +628,28 @@ Ensuring the reproducibility of an academic report and preparing it for submissi
 \subsection{Achieving Reproducibility}
 Reproducibility, in the context of this project, means that any researcher or evaluator should be able to obtain the identical PDF document by following the documented setup and compilation workflow, given the same source code and inputs.
 \begin{itemize}
-    \item \t\textbf{Version-Controlled Source Code:} All source files, including \t\texttt{main.tex}, \t\texttt{custom-academic-template.cls}, \t\texttt{references.bib}, agent scripts (in \t\texttt{src/}), and skill definitions (in \t\texttt{skills/}), are maintained under Git version control. This ensures that the exact state of the project at any given time can be retrieved.
-    \item \t\textbf{Declarative Environment Setup:} The \t\texttt{requirements.txt} file precisely lists all Python dependencies, allowing for the recreation of the exact Python environment. Similarly, the reliance on BasicTeX and LuaLaTeX (standard distributions) with clear installation instructions minimizes environmental variability.
-    \item \t\textbf{Explicit Compilation Workflow:} The "Setup and Compilation Workflow" (Section 15) provides a step-by-step guide to building the document from source. This includes the precise LuaLaTeX commands and the sequence of execution required to resolve all references and generate the final PDF.
-    \item \t\textbf{Immutable Template and Bibliography:} The \t\texttt{custom-academic-template.cls} and \t\texttt{references.bib} files are treated as stable, immutable components (as per assignment rules), ensuring that stylistic and bibliographic consistency is maintained across all compilations.
-    \item \t\textbf{Comprehensive Logging:} Detailed logs (in \t\texttt{ex04/logs/}) for content generation and QA checks provide an auditable trail of the document's creation, aiding in diagnosing any deviations during reproduction attempts.
+    \item \textbf{Version-Controlled Source Code:} All source files, including \texttt{main.tex}, \texttt{custom-academic-template.cls}, \texttt{references.bib}, agent scripts (in \texttt{src/}), and skill definitions (in \texttt{skills/}), are maintained under Git version control. This ensures that the exact state of the project at any given time can be retrieved.
+    \item \textbf{Declarative Environment Setup:} The \texttt{requirements.txt} file precisely lists all Python dependencies, allowing for the recreation of the exact Python environment. Similarly, the reliance on BasicTeX and LuaLaTeX (standard distributions) with clear installation instructions minimizes environmental variability.
+    \item \textbf{Explicit Compilation Workflow:} The "Setup and Compilation Workflow" (Section 15) provides a step-by-step guide to building the document from source. This includes the precise LuaLaTeX commands and the sequence of execution required to resolve all references and generate the final PDF.
+    \item \textbf{Immutable Template and Bibliography:} The \texttt{custom-academic-template.cls} and \texttt{references.bib} files are treated as stable, immutable components (as per assignment rules), ensuring that stylistic and bibliographic consistency is maintained across all compilations.
+    \item \textbf{Comprehensive Logging:} Detailed logs (in \texttt{ex04/logs/}) for content generation and QA checks provide an auditable trail of the document's creation, aiding in diagnosing any deviations during reproduction attempts.
 \end{itemize}
 By meticulously controlling these factors, the system aims to eliminate sources of variability, thereby guaranteeing that the generated PDF is a faithful and reproducible artifact of the agentic process.
 
 \subsection{Submission Readiness Checklist}
 A thorough submission readiness checklist ensures that all deliverables are complete, correctly formatted, and easily verifiable by the recipient.
 \begin{itemize}
-    \item \t\textbf{Final PDF Generation:} Confirm that the \t\texttt{main.pdf} in the \t\texttt{ex04/} directory is the latest compiled version and meets all page count and quality requirements.
-    \item \t\textbf{Clean Repository State:} Ensure the Git repository is in a clean state, with all relevant changes committed and no untracked files that are part of the submission. The \t\texttt{.gitignore} file should effectively exclude build artifacts.
-    \item \t\textbf{Comprehensive Documentation:} Verify that the \t\texttt{README.md} at the project root and any in-line comments in code or skill definitions provide sufficient information for understanding, running, and evaluating the project.
-    \item \t\textbf{Adherence to Assignment Constraints:} Double-check all strict rules, such as "modify only \t\texttt{ex04/main.tex}", "no new LaTeX packages", and "no Hebrew text", have been rigorously followed.
-    \item \t\textbf{Included Logs and Reports:} Ensure that \t\texttt{ex04/logs/generation\_log.md} and \t\texttt{ex04/logs/qa\_report.md} are current and included, providing a summary of agent activities and quality checks.
-    \item \t\textbf{Dependency Manifest:} Confirm \t\texttt{requirements.txt} is present and accurately lists all Python package dependencies required for the agent scripts.
-    \item \t\textbf{Clarity of Purpose:} The entire submission clearly articulates the assignment's objectives, the agentic architecture, and the methodologies employed, as detailed in the main body and appendices of the report.
+    \item \textbf{Final PDF Generation:} Confirm that the \texttt{main.pdf} in the \texttt{ex04/} directory is the latest compiled version and meets all page count and quality requirements.
+    \item \textbf{Clean Repository State:} Ensure the Git repository is in a clean state, with all relevant changes committed and no untracked files that are part of the submission. The \texttt{.gitignore} file should effectively exclude build artifacts.
+    \item \textbf{Comprehensive Documentation:} Verify that the \texttt{README.md} at the project root and any in-line comments in code or skill definitions provide sufficient information for understanding, running, and evaluating the project.
+    \item \textbf{Adherence to Assignment Constraints:} Double-check all strict rules, such as "modify only \texttt{ex04/main.tex}", "no new LaTeX packages", and "no Hebrew text", have been rigorously followed.
+    \item \textbf{Included Logs and Reports:} Ensure that \texttt{ex04/logs/generation\_log.md} and \texttt{ex04/logs/qa\_report.md} are current and included, providing a summary of agent activities and quality checks.
+    \item \textbf{Dependency Manifest:} Confirm \texttt{requirements.txt} is present and accurately lists all Python package dependencies required for the agent scripts.
+    \item \textbf{Clarity of Purpose:} The entire submission clearly articulates the assignment's objectives, the agentic architecture, and the methodologies employed, as detailed in the main body and appendices of the report.
 \end{itemize}
 This dual focus on reproducibility and submission readiness ensures that the project not only delivers a high-quality academic report but also provides a transparent and verifiable account of its automated generation process.
 
-\n\newpage
+\newpage
 \section{Appendix G: Submission Quality Review}
 
 A final quality review is an essential part of an agentic document generation workflow. The purpose of this review is to verify that the project is not only technically present in the repository, but also understandable, reproducible, and aligned with the assignment requirements. In this submission, the review focuses on the relationship between the planning documents, the LaTeX source file, the custom class template, the generated PDF, the skills, and the quality assurance materials.
@@ -660,7 +660,7 @@ The second review dimension is reproducibility. The PDF is not only uploaded as 
 
 The third review dimension is evidence. The repository includes logs, quality assurance materials, and skill definitions. These files show that the workflow was treated as an agentic process rather than as a single static writing task. The evidence makes the submission easier to audit and helps connect the final PDF to the process that produced it.
 
-\n\newpage
+\newpage
 \section{Appendix H: Evaluation Rubric Mapping}
 
 A strong submission can be evaluated by mapping each expected requirement to a visible artifact in the repository. The product requirement document explains the goal and scope of the assignment. The plan describes the work process. The task checklist translates the plan into concrete execution items. The README files explain the project to an external evaluator. Together, these documents create a clear path from requirements to implementation.
@@ -671,7 +671,7 @@ The skills directory represents the agentic layer of the assignment. Each skill 
 
 The quality assurance script provides an automated validation layer. It checks whether required files and folders exist and gives a clear result. Although the script is intentionally simple, it demonstrates the principle that generated work should be evaluated before submission.
 
-\n\newpage
+\newpage
 \section{Appendix I: Risk Review and Mitigation}
 
 One risk in this type of project is that the final document may become disconnected from the repository structure. This risk is mitigated by describing the repository components inside the report and by maintaining README files that explain the same structure from a practical perspective. The report and the repository therefore support each other.
@@ -682,7 +682,7 @@ A third risk is over-reliance on automatic generation. Agentic tools can produce
 
 A fourth risk is unclear grading evidence. A repository can contain many files, but without documentation the evaluator may not understand their purpose. The README files, logs, skills, and QA materials are included to make the submission legible, auditable, and easier to evaluate.
 
-\n\newpage
+\newpage
 \section{Appendix J: Final Readiness Statement}
 
 The project is ready for submission when several conditions are satisfied. First, the planning documents must exist and clearly explain the assignment goals. Second, the LaTeX source and custom class file must exist and compile successfully. Third, the generated PDF must be included in the repository. Fourth, the README files must explain the purpose, structure, setup process, limitations, and expected output.
