@@ -7,15 +7,15 @@
 % are needed, they would ideally be included in the custom-academic-template.cls.
 % We will proceed assuming the .cls file supports necessary features for this content.
 
-	\title{Agentic PDF Generation with LaTeX, LuaLaTeX, CLS Templates, Skills, QA Orchestration, and Reproducible GitHub Submission}
+	\t\title{Agentic PDF Generation with LaTeX, LuaLaTeX, CLS Templates, Skills, QA Orchestration, and Reproducible GitHub Submission}
 \author{Gemini CLI Agent}
 \date{June 10, 2026} % Updated date to reflect session context
 
 \begin{document}
 
 \maketitlepage
-	\tableofcontents
-\newpage
+	\t\tableofcontents
+\n\newpage
 
 % 1. Assignment Requirements
 \section{Assignment Requirements and Objectives}
@@ -47,26 +47,26 @@ While traditional LaTeX engines like pdfLaTeX are powerful, LuaLaTeX offers sign
 
 Key advantages of LuaLaTeX include:
 \begin{itemize}
-    \item 	extbf{Embedded Scripting:} Developers can write Lua scripts that run at compile time. These scripts can dynamically generate content, modify document structures, interact with external data, or perform complex calculations before the final typesetting occurs. This capability is invaluable for automating the creation of detailed reports, bibliographies, or index entries.
-    \item 	extbf{Enhanced Unicode Support:} LuaLaTeX provides superior support for Unicode characters, which is essential for documents dealing with multiple languages, specialized symbols, or modern character sets. This makes it more flexible for internationalization and diverse content needs.
-    \item 	extbf{Extensibility:} The Lua API exposed to LaTeX allows for deep customization and extension of LaTeX's capabilities. Package authors can leverage Lua to create more powerful and efficient packages, and users can implement custom logic directly within their documents.
-    \item 	extbf{Performance:} In many scenarios, LuaLaTeX can offer performance improvements, especially for documents that require extensive processing or dynamic content generation, due to the efficiency of the Lua interpreter.
+    \item 	\textbf{Embedded Scripting:} Developers can write Lua scripts that run at compile time. These scripts can dynamically generate content, modify document structures, interact with external data, or perform complex calculations before the final typesetting occurs. This capability is invaluable for automating the creation of detailed reports, bibliographies, or index entries.
+    \item 	\textbf{Enhanced Unicode Support:} LuaLaTeX provides superior support for Unicode characters, which is essential for documents dealing with multiple languages, specialized symbols, or modern character sets. This makes it more flexible for internationalization and diverse content needs.
+    \item 	\textbf{Extensibility:} The Lua API exposed to LaTeX allows for deep customization and extension of LaTeX's capabilities. Package authors can leverage Lua to create more powerful and efficient packages, and users can implement custom logic directly within their documents.
+    \item 	\textbf{Performance:} In many scenarios, LuaLaTeX can offer performance improvements, especially for documents that require extensive processing or dynamic content generation, due to the efficiency of the Lua interpreter.
 \end{itemize}
 For an assignment focused on agentic PDF generation, LuaLaTeX's ability to programmatically control document creation and structure makes it a powerful tool. It allows the 'LaTeX Builder Agent' to execute sophisticated logic, thereby enabling the generation of more dynamic and complex documents that would be challenging with older engines.
 
 % 5. Role of the CLS template
 \section{The Role of the CLS Template}
-The Document Class file (``.cls``) serves as the blueprint for a LaTeX document's overall structure, appearance, and behavior. In this assignment, the 	exttt{custom-academic-template.cls} file plays a critical role in enforcing consistency, adhering to specific academic standards, and streamlining the document creation process.
+The Document Class file (``.cls``) serves as the blueprint for a LaTeX document's overall structure, appearance, and behavior. In this assignment, the 	\texttt{custom-academic-template.cls} file plays a critical role in enforcing consistency, adhering to specific academic standards, and streamlining the document creation process.
 
 Its responsibilities include:
 \begin{itemize}
-    \item 	extbf{Defining Document Structure:} It sets up the basic commands and environments for sections, subsections, figures, tables, bibliographies, and other standard document elements. This ensures a uniform structure across all generated documents.
-    \item 	extbf{Enforcing Styling and Formatting:} The CLS file dictates the typography (fonts, sizes, line spacing), margins, page layout, and the visual presentation of headings, lists, and other elements. This guarantees a professional and aesthetically pleasing academic look, consistent with the assignment's requirements.
-    \item 	extbf{Managing Packages:} It loads and configures essential LaTeX packages required for the document's functionality. By managing package inclusion here, we ensure that all necessary tools for typesetting, referencing, or specific formatting are available without cluttering the main document file.
-    \item 	extbf{Providing Custom Commands and Environments:} The template can define custom commands or environments tailored to the specific needs of the project, such as commands for specific types of figures, tables, or even agent-generated content blocks.
-    \item 	extbf{Ensuring Reproducibility:} By centralizing formatting and package management, the CLS file ensures that documents compiled on different systems using the same template and LaTeX distribution will look identical, contributing significantly to the overall reproducibility of the generated PDFs.
+    \item 	\textbf{Defining Document Structure:} It sets up the basic commands and environments for sections, subsections, figures, tables, bibliographies, and other standard document elements. This ensures a uniform structure across all generated documents.
+    \item 	\textbf{Enforcing Styling and Formatting:} The CLS file dictates the typography (fonts, sizes, line spacing), margins, page layout, and the visual presentation of headings, lists, and other elements. This guarantees a professional and aesthetically pleasing academic look, consistent with the assignment's requirements.
+    \item 	\textbf{Managing Packages:} It loads and configures essential LaTeX packages required for the document's functionality. By managing package inclusion here, we ensure that all necessary tools for typesetting, referencing, or specific formatting are available without cluttering the main document file.
+    \item 	\textbf{Providing Custom Commands and Environments:} The template can define custom commands or environments tailored to the specific needs of the project, such as commands for specific types of figures, tables, or even agent-generated content blocks.
+    \item 	\textbf{Ensuring Reproducibility:} By centralizing formatting and package management, the CLS file ensures that documents compiled on different systems using the same template and LaTeX distribution will look identical, contributing significantly to the overall reproducibility of the generated PDFs.
 \end{itemize}
-In essence, the 	exttt{custom-academic-template.cls} acts as a contract between the content generators (agents) and the typesetting engine, ensuring that the output is both structurally sound and visually compliant with academic conventions.
+In essence, the 	\texttt{custom-academic-template.cls} acts as a contract between the content generators (agents) and the typesetting engine, ensuring that the output is both structurally sound and visually compliant with academic conventions.
 
 % 6. Skills as reusable agent instructions
 \section{Skills as Reusable Agent Instructions}
@@ -74,11 +74,11 @@ In the context of agent-based systems, "skills" represent modular, self-containe
 
 The benefits of using skills are manifold:
 \begin{itemize}
-    \item 	extbf{Modularity:} Each skill focuses on a single responsibility (e.g., writing a specific section, checking citations, compiling LaTeX). This makes the system easier to understand, develop, and maintain.
-    \item 	extbf{Reusability:} A skill developed for one part of the document generation process can be reused in other contexts or by different agents, promoting efficiency and consistency. For instance, a 'QA References Skill' could be applied to various document sections.
-    \item 	extbf{Abstraction:} Agents interacting with skills do not need to know the intricate details of how a skill is implemented. They only need to know what input the skill requires and what output it produces. This simplifies agent design and interaction.
-    \item 	extbf{Scalability:} As the complexity of the document generation task grows, new skills can be added or existing ones can be improved without significantly altering the core orchestrator logic.
-    \item 	extbf{Testability:} Individual skills can be tested in isolation, simplifying the debugging process and ensuring the reliability of each component.
+    \item 	\textbf{Modularity:} Each skill focuses on a single responsibility (e.g., writing a specific section, checking citations, compiling LaTeX). This makes the system easier to understand, develop, and maintain.
+    \item 	\textbf{Reusability:} A skill developed for one part of the document generation process can be reused in other contexts or by different agents, promoting efficiency and consistency. For instance, a 'QA References Skill' could be applied to various document sections.
+    \item 	\textbf{Abstraction:} Agents interacting with skills do not need to know the intricate details of how a skill is implemented. They only need to know what input the skill requires and what output it produces. This simplifies agent design and interaction.
+    \item 	\textbf{Scalability:} As the complexity of the document generation task grows, new skills can be added or existing ones can be improved without significantly altering the core orchestrator logic.
+    \item 	\textbf{Testability:} Individual skills can be tested in isolation, simplifying the debugging process and ensuring the reliability of each component.
 \end{itemize}
 The skills used in this assignment, such as 'Content Writer', 'LaTeX Builder', and various 'QA Agents', are designed to be callable by the orchestrator, forming the building blocks of the autonomous PDF generation pipeline.
 
@@ -88,11 +88,11 @@ The Orchestrator Agent is the central intelligence of the autonomous PDF generat
 
 The design of the orchestrator agent follows a goal-oriented, state-driven approach:
 \begin{itemize}
-    \item 	extbf{Goal Decomposition:} Upon receiving the request to generate the document, the orchestrator breaks down the high-level objective into a series of sequential and parallel sub-goals. This decomposition is informed by the assignment requirements, including the specific sections to be generated and the desired document structure.
-    \item 	extbf{Task Delegation:} For each sub-goal, the orchestrator identifies the most appropriate skill or agent to handle it. For example, generating text for a section is delegated to the 'Content Writer Agent', while compiling the LaTeX document is assigned to the 'LaTeX Builder Agent'.
-    \item 	extbf{Workflow Management:} The orchestrator manages the dependencies between tasks. For instance, content must be written before it can be compiled, and compilation must succeed before QA checks can be performed on the output PDF. It ensures tasks are executed in the correct order, potentially in parallel where dependencies allow.
-    \item 	extbf{Error Handling and Recovery:} A critical function of the orchestrator is to monitor the execution of delegated tasks. If a skill fails or produces an error (e.g., LaTeX compilation errors), the orchestrator must detect this, attempt recovery strategies (e.g., re-running a task with modified parameters, using an alternative approach), or report the failure to a higher authority (e.g., the user).
-    \item 	extbf{State Management:} The orchestrator maintains the current state of the document generation process, tracking which tasks have been completed, which are in progress, and which are pending. This state information is crucial for resuming interrupted processes or for providing status updates.
+    \item 	\textbf{Goal Decomposition:} Upon receiving the request to generate the document, the orchestrator breaks down the high-level objective into a series of sequential and parallel sub-goals. This decomposition is informed by the assignment requirements, including the specific sections to be generated and the desired document structure.
+    \item 	\textbf{Task Delegation:} For each sub-goal, the orchestrator identifies the most appropriate skill or agent to handle it. For example, generating text for a section is delegated to the 'Content Writer Agent', while compiling the LaTeX document is assigned to the 'LaTeX Builder Agent'.
+    \item 	\textbf{Workflow Management:} The orchestrator manages the dependencies between tasks. For instance, content must be written before it can be compiled, and compilation must succeed before QA checks can be performed on the output PDF. It ensures tasks are executed in the correct order, potentially in parallel where dependencies allow.
+    \item 	\textbf{Error Handling and Recovery:} A critical function of the orchestrator is to monitor the execution of delegated tasks. If a skill fails or produces an error (e.g., LaTeX compilation errors), the orchestrator must detect this, attempt recovery strategies (e.g., re-running a task with modified parameters, using an alternative approach), or report the failure to a higher authority (e.g., the user).
+    \item 	\textbf{State Management:} The orchestrator maintains the current state of the document generation process, tracking which tasks have been completed, which are in progress, and which are pending. This state information is crucial for resuming interrupted processes or for providing status updates.
 \end{itemize}
 The orchestrator acts as the conductor of an orchestra, ensuring that each instrument (skill) plays its part at the right time, contributing to a harmonious final performance—in this case, a polished, accurate, and reproducible PDF document.
 
@@ -102,11 +102,11 @@ The Content Writer Agent is responsible for generating the textual content of th
 
 Key aspects of the Content Writer Agent include:
 \begin{itemize}
-    \item 	extbf{Prompt Interpretation:} The agent receives detailed prompts from the orchestrator, specifying the topic, desired length, key points to cover, and the target audience/style (e.g., academic, formal).
-    \item 	extbf{Knowledge Retrieval:} It may access internal knowledge bases, external information sources (if permitted and configured), or pre-defined content structures to gather relevant information for the assigned section.
-    \item 	extbf{Text Generation:} Utilizing advanced language models or rule-based systems, the agent formulates coherent sentences, paragraphs, and longer passages. It focuses on maintaining a consistent tone, logical flow, and accurate representation of information.
-    \item 	extbf{Adherence to Constraints:} The agent must ensure that the generated content aligns with the assignment's requirements, such as avoiding filler text, not using Hebrew characters prematurely, and fulfilling the page count target by providing sufficient detail.
-    \item 	extbf{Output Formatting:} The generated text is typically produced in a format suitable for integration into the LaTeX document, often as plain text or markdown, which can then be processed by the LaTeX Builder Agent.
+    \item 	\textbf{Prompt Interpretation:} The agent receives detailed prompts from the orchestrator, specifying the topic, desired length, key points to cover, and the target audience/style (e.g., academic, formal).
+    \item 	\textbf{Knowledge Retrieval:} It may access internal knowledge bases, external information sources (if permitted and configured), or pre-defined content structures to gather relevant information for the assigned section.
+    \item 	\textbf{Text Generation:} Utilizing advanced language models or rule-based systems, the agent formulates coherent sentences, paragraphs, and longer passages. It focuses on maintaining a consistent tone, logical flow, and accurate representation of information.
+    \item 	\textbf{Adherence to Constraints:} The agent must ensure that the generated content aligns with the assignment's requirements, such as avoiding filler text, not using Hebrew characters prematurely, and fulfilling the page count target by providing sufficient detail.
+    \item 	\textbf{Output Formatting:} The generated text is typically produced in a format suitable for integration into the LaTeX document, often as plain text or markdown, which can then be processed by the LaTeX Builder Agent.
 \end{itemize}
 For this assignment, the Content Writer Agent will be tasked with elaborating on each of the sections outlined in the requirements, ensuring that the generated text is not only factually accurate but also stylistically appropriate for an academic report.
 
@@ -116,11 +116,11 @@ The LaTeX Builder Agent's core function is to take the content generated by othe
 
 Its responsibilities are as follows:
 \begin{itemize}
-    \item 	extbf{Document Assembly:} It receives the structured content (e.g., text for sections, tables, figure captions) and embeds it within the LaTeX structure defined by the 	exttt{custom-academic-template.cls}. This involves placing content in the correct sections, ensuring proper use of LaTeX commands for formatting and structure.
-    \item 	extbf{Compilation Execution:} The agent invokes the LuaLaTeX compiler to process the assembled `.tex` file. This step transforms the source code into a PDF. The agent must ensure that the correct compiler is used and that any necessary compilation passes (e.g., for references, table of contents) are executed.
-    \item 	extbf{Error Handling:} If the LuaLaTeX compilation process fails, the agent is responsible for capturing the error messages. It then reports these errors back to the orchestrator, which may attempt to resolve them or use them to refine subsequent generation steps.
-    \item 	extbf{Output Management:} Upon successful compilation, the agent ensures that the generated PDF file, along with any intermediate files (like `.aux`, `.log`), are managed appropriately, typically making them available for the QA agents.
-    \item 	extbf{Configuration:} It ensures that the compilation environment is correctly configured, respecting any specific requirements of the CLS template or the LuaLaTeX engine.
+    \item 	\textbf{Document Assembly:} It receives the structured content (e.g., text for sections, tables, figure captions) and embeds it within the LaTeX structure defined by the 	\texttt{custom-academic-template.cls}. This involves placing content in the correct sections, ensuring proper use of LaTeX commands for formatting and structure.
+    \item 	\textbf{Compilation Execution:} The agent invokes the LuaLaTeX compiler to process the assembled `.tex` file. This step transforms the source code into a PDF. The agent must ensure that the correct compiler is used and that any necessary compilation passes (e.g., for references, table of contents) are executed.
+    \item 	\textbf{Error Handling:} If the LuaLaTeX compilation process fails, the agent is responsible for capturing the error messages. It then reports these errors back to the orchestrator, which may attempt to resolve them or use them to refine subsequent generation steps.
+    \item 	\textbf{Output Management:} Upon successful compilation, the agent ensures that the generated PDF file, along with any intermediate files (like `.aux`, `.log`), are managed appropriately, typically making them available for the QA agents.
+    \item 	\textbf{Configuration:} It ensures that the compilation environment is correctly configured, respecting any specific requirements of the CLS template or the LuaLaTeX engine.
 \end{itemize}
 This agent is critical for translating the abstract "what" of the content into the concrete "how" of the typeset document, directly contributing to the assignment's goal of automated, high-quality PDF generation.
 
@@ -130,11 +130,11 @@ The QA Structure Agent is dedicated to verifying the structural integrity and lo
 
 Key functions of the QA Structure Agent include:
 \begin{itemize}
-    \item 	extbf{Section and Subsection Validation:} It checks that all intended sections and subsections are present, correctly numbered, and logically ordered according to the assignment requirements and academic best practices.
-    \item 	extbf{Page Break Verification:} The agent assesses the placement and appropriateness of page breaks, particularly those explicitly inserted using 	exttt{\newpage}. It verifies that major sections are not awkwardly split or that new major parts begin on new pages as intended.
-    \item 	extbf{List and Enumeration Checks:} It may verify the correct formatting and numbering of lists, itemizations, and enumerations within the document.
-    \item 	extbf{Table and Figure Placement:} The agent can check that tables and figures are correctly placed, captioned, and labeled, and that references to them within the text are accurate.
-    \item 	extbf{Table of Contents Consistency:} It confirms that the Table of Contents accurately reflects the structure and pagination of the document's main body.
+    \item 	\textbf{Section and Subsection Validation:} It checks that all intended sections and subsections are present, correctly numbered, and logically ordered according to the assignment requirements and academic best practices.
+    \item 	\textbf{Page Break Verification:} The agent assesses the placement and appropriateness of page breaks, particularly those explicitly inserted using 	\texttt{\n\newpage}. It verifies that major sections are not awkwardly split or that new major parts begin on new pages as intended.
+    \item 	\textbf{List and Enumeration Checks:} It may verify the correct formatting and numbering of lists, itemizations, and enumerations within the document.
+    \item 	\textbf{Table and Figure Placement:} The agent can check that tables and figures are correctly placed, captioned, and labeled, and that references to them within the text are accurate.
+    \item 	\textbf{Table of Contents Consistency:} It confirms that the Table of Contents accurately reflects the structure and pagination of the document's main body.
 \end{itemize}
 By systematically analyzing the document's structural elements, the QA Structure Agent ensures that the generated output is not only aesthetically pleasing but also logically coherent and easy to navigate, fulfilling a critical aspect of the assignment's quality requirements.
 
@@ -144,11 +144,11 @@ The QA References Agent is responsible for ensuring the accuracy and integrity o
 
 Its key tasks include:
 \begin{itemize}
-    \item 	extbf{Citation Verification:} The agent checks that every citation made in the text (e.g., 	exttt{\cite\{key\}}) corresponds to a valid entry in the bibliography. It verifies that citation keys are correctly spelled and formatted.
-    \item 	extbf{Bibliography Integrity:} It ensures that all entries in the bibliography section are correctly formatted according to the specified style (as dictated by the CLS template or associated bibliography style files) and that all cited works are present.
-    \item 	extbf{Cross-Reference Validation:} For internal references (e.g., to figures, tables, sections using 	exttt{
-ef\{label\}}, 	exttt{\pageref\{label\}}), the agent confirms that the labels exist and that the referenced numbers or page numbers are accurate.
-    \item 	extbf{Unused References Detection:} It can identify citation keys or labels that are defined but never used, helping to clean up the document.
+    \item 	\textbf{Citation Verification:} The agent checks that every citation made in the text (e.g., 	\texttt{\cite\{key\}}) corresponds to a valid entry in the bibliography. It verifies that citation keys are correctly spelled and formatted.
+    \item 	\textbf{Bibliography Integrity:} It ensures that all entries in the bibliography section are correctly formatted according to the specified style (as dictated by the CLS template or associated bibliography style files) and that all cited works are present.
+    \item 	\textbf{Cross-Reference Validation:} For internal references (e.g., to figures, tables, sections using 	\texttt{
+ef\{label\}}, 	\texttt{\pageref\{label\}}), the agent confirms that the labels exist and that the referenced numbers or page numbers are accurate.
+    \item 	\textbf{Unused References Detection:} It can identify citation keys or labels that are defined but never used, helping to clean up the document.
 \end{itemize}
 By performing these checks, the QA References Agent guarantees that the document's scholarly apparatus is robust and error-free, contributing significantly to its overall quality and trustworthiness. The correct functioning of this agent relies on the LaTeX Builder Agent successfully processing the bibliography and references during compilation.
 
@@ -158,12 +158,12 @@ The QA BiDi (Bidirectional) Agent's role is to ensure that the document correctl
 
 The agent's potential functions include:
 \begin{itemize}
-    \item 	extbf{Directionality Analysis:} It analyzes the document to identify sections that require RTL rendering (e.g., Hebrew or Arabic text) and verifies that these sections are correctly marked and processed by the LaTeX engine.
-    \item 	extbf{Script Mixing:} For documents that mix Left-to-Right (LTR) and RTL scripts, the agent checks for correct handling of text flow, punctuation, and alignment at the boundaries between different directional texts.
-    \item 	extbf{Layout Consistency:} It ensures that the overall document layout, including paragraph alignment and the placement of elements like lists or quotations, remains consistent and readable regardless of the text directionality.
-    \item 	extbf{Font Support Verification:} The agent can flag potential issues related to font support for specific characters or scripts, ensuring that all necessary glyphs are available for rendering.
+    \item 	\textbf{Directionality Analysis:} It analyzes the document to identify sections that require RTL rendering (e.g., Hebrew or Arabic text) and verifies that these sections are correctly marked and processed by the LaTeX engine.
+    \item 	\textbf{Script Mixing:} For documents that mix Left-to-Right (LTR) and RTL scripts, the agent checks for correct handling of text flow, punctuation, and alignment at the boundaries between different directional texts.
+    \item 	\textbf{Layout Consistency:} It ensures that the overall document layout, including paragraph alignment and the placement of elements like lists or quotations, remains consistent and readable regardless of the text directionality.
+    \item 	\textbf{Font Support Verification:} The agent can flag potential issues related to font support for specific characters or scripts, ensuring that all necessary glyphs are available for rendering.
 \end{itemize}
-Even without immediate RTL content, defining this agent establishes a placeholder for future expansion and highlights the framework's potential for internationalization. Its checks would primarily focus on ensuring that appropriate LaTeX packages (like 	exttt{polyglossia} or 	exttt{babel} with correct language options, if they were permitted) are correctly configured and that the document structure supports mixed-directionality.
+Even without immediate RTL content, defining this agent establishes a placeholder for future expansion and highlights the framework's potential for internationalization. Its checks would primarily focus on ensuring that appropriate LaTeX packages (like 	\texttt{polyglossia} or 	\texttt{babel} with correct language options, if they were permitted) are correctly configured and that the document structure supports mixed-directionality.
 
 % 13. Repository Structure
 \section{Repository Structure}
@@ -171,33 +171,33 @@ The project repository is organized to promote modularity, clarity, and maintain
 
 The main directories and their purposes are as follows:
 \begin{itemize}
-    \item 	exttt{/ex04/}: This top-level directory contains the core artifacts for Assignment 04.
+    \item 	\texttt{/ex04/}: This top-level directory contains the core artifacts for Assignment 04.
     \begin{itemize}
-        \item 	exttt{main.tex}: The primary LaTeX source file for the academic report.
-        \item 	exttt{custom-academic-template.cls}: The custom document class file that defines the report's structure and styling.
-        \item 	exttt{references.bib}: The bibliography file containing all references cited in the document.
-        \item 	exttt{assets/}: Contains various assets required for the document, such as:
+        \item 	\texttt{main.tex}: The primary LaTeX source file for the academic report.
+        \item 	\texttt{custom-academic-template.cls}: The custom document class file that defines the report's structure and styling.
+        \item 	\texttt{references.bib}: The bibliography file containing all references cited in the document.
+        \item 	\texttt{assets/}: Contains various assets required for the document, such as:
             \begin{itemize}
-                \item 	exttt{graphs/}: Placeholder for generated or sourced charts and graphs.
-                \item 	exttt{images/}: Directory for image files used in the document.
+                \item 	\texttt{graphs/}: Placeholder for generated or sourced charts and graphs.
+                \item 	\texttt{images/}: Directory for image files used in the document.
             \end{itemize}
-        \item 	exttt{skills/}: This directory houses the declarative definitions for various agent skills. Each file (e.g., 	exttt{content\_writer\_skill.md}) represents a distinct agent capability.
-        \item 	exttt{src/}: Contains the Python scripts that implement the core agents and logic:
+        \item 	\texttt{skills/}: This directory houses the declarative definitions for various agent skills. Each file (e.g., 	\texttt{content\_writer\_skill.md}) represents a distinct agent capability.
+        \item 	\texttt{src/}: Contains the Python scripts that implement the core agents and logic:
             \begin{itemize}
-                \item 	exttt{orchestrator.py}: The main orchestrator agent script.
-                \item 	exttt{compile\_pdf.py}: Logic for the LaTeX Builder Agent.
-                \item 	exttt{qa\_check.py}: Scripts for various QA agents (structure, references, BiDi).
+                \item 	\texttt{orchestrator.py}: The main orchestrator agent script.
+                \item 	\texttt{compile\_pdf.py}: Logic for the LaTeX Builder Agent.
+                \item 	\texttt{qa\_check.py}: Scripts for various QA agents (structure, references, BiDi).
             \end{itemize}
-        \item 	exttt{logs/}: Stores log files generated during the execution of agents and compilation processes.
+        \item 	\texttt{logs/}: Stores log files generated during the execution of agents and compilation processes.
             \begin{itemize}
-                \item 	exttt{generation\_log.md}: Logs related to content generation.
-                \item 	exttt{qa\_report.md}: Summarized reports from the QA agents.
+                \item 	\texttt{generation\_log.md}: Logs related to content generation.
+                \item 	\texttt{qa\_report.md}: Summarized reports from the QA agents.
             \end{itemize}
-        \item 	exttt{screenshots/}: Captures of intermediate or final outputs, useful for debugging and documentation.
+        \item 	\texttt{screenshots/}: Captures of intermediate or final outputs, useful for debugging and documentation.
     \end{itemize}
-    \item 	exttt{/ex02/} and 	exttt{/ex03/}: These directories contain artifacts from previous assignments, likely demonstrating different aspects of agentic workflows or document generation. They are excluded from modifications as per assignment rules.
-    \item 	exttt{README.md}: The main project README file, providing an overview of the repository.
-    \item 	exttt{.gitignore}: Configures Git to ignore specific files and directories (e.g., build artifacts, temporary files).
+    \item 	\texttt{/ex02/} and 	\texttt{/ex03/}: These directories contain artifacts from previous assignments, likely demonstrating different aspects of agentic workflows or document generation. They are excluded from modifications as per assignment rules.
+    \item 	\texttt{README.md}: The main project README file, providing an overview of the repository.
+    \item 	\texttt{.gitignore}: Configures Git to ignore specific files and directories (e.g., build artifacts, temporary files).
 \end{itemize}
 This hierarchical structure ensures that related components are grouped together, promoting a clear understanding of the project's architecture and facilitating development and maintenance.
 
@@ -207,19 +207,19 @@ A robust GitHub submission strategy is essential for ensuring that the generated
 
 The proposed strategy includes the following steps:
 \begin{itemize}
-    \item 	extbf{Branching Strategy:} All development work will be conducted on a dedicated feature branch, such as 	exttt{assignment04-feature}, branching off the main development line (e.g., 	exttt{main} or 	exttt{develop}). This isolates changes and prevents direct interference with stable code.
-    \item 	extbf{Local Development and Compilation:} Developers will use their local environment (configured with BasicTeX and LuaLaTeX) to develop and test the agentic pipeline. The 	exttt{src/} scripts and 	exttt{skills/} definitions will be iterated upon, with frequent compilation of 	exttt{ex04/main.tex} to verify output and catch errors early.
-    \item 	extbf{Version Control:}
+    \item 	\textbf{Branching Strategy:} All development work will be conducted on a dedicated feature branch, such as 	\texttt{assignment04-feature}, branching off the main development line (e.g., 	\texttt{main} or 	\texttt{develop}). This isolates changes and prevents direct interference with stable code.
+    \item 	\textbf{Local Development and Compilation:} Developers will use their local environment (configured with BasicTeX and LuaLaTeX) to develop and test the agentic pipeline. The 	\texttt{src/} scripts and 	\texttt{skills/} definitions will be iterated upon, with frequent compilation of 	\texttt{ex04/main.tex} to verify output and catch errors early.
+    \item 	\textbf{Version Control:}
         \begin{itemize}
-            \item 	exttt{git add}: All modified source files (Python scripts, skill definitions, LaTeX files, CLS templates) will be staged.
-            \item 	exttt{git commit}: Changes will be committed with clear, descriptive messages outlining the purpose and scope of the commit. For example: "feat: Implement Content Writer agent for section 3" or "fix: Resolve compilation error in LaTeX Builder". Commit messages will follow a conventional format (e.g., Conventional Commits).
-            \item 	exttt{git status}: Regularly used to review changes before staging and committing.
-            \item 	exttt{git diff}: Used to review the exact changes introduced in a commit.
+            \item 	\texttt{git add}: All modified source files (Python scripts, skill definitions, LaTeX files, CLS templates) will be staged.
+            \item 	\texttt{git commit}: Changes will be committed with clear, descriptive messages outlining the purpose and scope of the commit. For example: "feat: Implement Content Writer agent for section 3" or "fix: Resolve compilation error in LaTeX Builder". Commit messages will follow a conventional format (e.g., Conventional Commits).
+            \item 	\texttt{git status}: Regularly used to review changes before staging and committing.
+            \item 	\texttt{git diff}: Used to review the exact changes introduced in a commit.
         \end{itemize}
-    \item 	extbf{Pull Request (PR):} Once the development on the feature branch is complete and thoroughly tested locally, a pull request will be opened against the main development branch. This PR will serve as a formal proposal for merging the changes.
-    \item 	extbf{Code Review:} The PR will be subject to code review by peers or automated systems. This is an opportunity to identify potential issues, suggest improvements, and ensure adherence to coding standards and assignment requirements.
-    \item 	extbf{Merging:} Upon approval, the changes from the feature branch will be merged into the main development branch.
-    \item 	extbf{Final Submission:} The final submission will likely involve ensuring the `main` branch reflects the completed assignment, or as per specific instructions from the instructor (e.g., creating a release tag). The presence of the compiled PDF, source code, and all necessary configuration files in the repository ensures full reproducibility.
+    \item 	\textbf{Pull Request (PR):} Once the development on the feature branch is complete and thoroughly tested locally, a pull request will be opened against the main development branch. This PR will serve as a formal proposal for merging the changes.
+    \item 	\textbf{Code Review:} The PR will be subject to code review by peers or automated systems. This is an opportunity to identify potential issues, suggest improvements, and ensure adherence to coding standards and assignment requirements.
+    \item 	\textbf{Merging:} Upon approval, the changes from the feature branch will be merged into the main development branch.
+    \item 	\textbf{Final Submission:} The final submission will likely involve ensuring the `main` branch reflects the completed assignment, or as per specific instructions from the instructor (e.g., creating a release tag). The presence of the compiled PDF, source code, and all necessary configuration files in the repository ensures full reproducibility.
 \end{itemize}
 This systematic approach ensures that the project evolves in a controlled manner, with a complete history of changes and a high degree of confidence in the final submission's quality and reproducibility.
 
@@ -230,23 +230,23 @@ To ensure reproducible results, a clear workflow for setting up the environment 
 \subsection{Environment Setup}
 Before compilation, the following setup steps are necessary:
 \begin{enumerate}
-    \item 	extbf{Install BasicTeX:} Ensure a minimal TeX distribution is installed. BasicTeX is recommended for its lightweight nature. For macOS, this can be installed via its official installer.
-    \item 	extbf{Install LuaLaTeX:} BasicTeX typically includes LuaLaTeX. If not, or if a different distribution is used, ensure LuaLaTeX is installed. Verify by running 	exttt{lualatex --version} in the terminal.
-    \item 	extbf{Install Python Dependencies:} The Python scripts powering the agents require specific libraries. Install them using pip:
+    \item 	\textbf{Install BasicTeX:} Ensure a minimal TeX distribution is installed. BasicTeX is recommended for its lightweight nature. For macOS, this can be installed via its official installer.
+    \item 	\textbf{Install LuaLaTeX:} BasicTeX typically includes LuaLaTeX. If not, or if a different distribution is used, ensure LuaLaTeX is installed. Verify by running 	\texttt{lualatex --version} in the terminal.
+    \item 	\textbf{Install Python Dependencies:} The Python scripts powering the agents require specific libraries. Install them using pip:
         \begin{verbatim}
         pip install -r ex04/requirements.txt
         \end{verbatim}
-        (Note: 	exttt{requirements.txt} needs to be created or exist in the specified path.)
-    \item 	extbf{Clone Repository:} Ensure the project repository is cloned and accessible. All paths mentioned are relative to the repository root.
+        (Note: 	\texttt{requirements.txt} needs to be created or exist in the specified path.)
+    \item 	\textbf{Clone Repository:} Ensure the project repository is cloned and accessible. All paths mentioned are relative to the repository root.
 \end{enumerate}
 
 \subsection{Compilation Workflow}
 The compilation process, managed by the LaTeX Builder Agent, involves the following steps:
 \begin{enumerate}
-    \item 	extbf{Content Generation:} The Orchestrator Agent first invokes the Content Writer Agent to generate text for all required sections, populating 	exttt{main.tex} or an intermediate content store.
-    \item 	extbf{LaTeX Assembly:} The LaTeX Builder Agent then takes the generated content and integrates it into the 	exttt{main.tex} file, ensuring it correctly uses the 	exttt{custom-academic-template.cls}.
-    \item 	extbf{Bibliography Processing:} If using 	exttt{biblatex} or similar, the bibliography file (	exttt{references.bib}) is processed. (Assuming the CLS handles this).
-    \item 	extbf{LuaLaTeX Compilation:} The agent executes LuaLaTeX multiple times to resolve all dependencies, cross-references, and table of contents entries:
+    \item 	\textbf{Content Generation:} The Orchestrator Agent first invokes the Content Writer Agent to generate text for all required sections, populating 	\texttt{main.tex} or an intermediate content store.
+    \item 	\textbf{LaTeX Assembly:} The LaTeX Builder Agent then takes the generated content and integrates it into the 	\texttt{main.tex} file, ensuring it correctly uses the 	\texttt{custom-academic-template.cls}.
+    \item 	\textbf{Bibliography Processing:} If using 	\texttt{biblatex} or similar, the bibliography file (	\texttt{references.bib}) is processed. (Assuming the CLS handles this).
+    \item 	\textbf{LuaLaTeX Compilation:} The agent executes LuaLaTeX multiple times to resolve all dependencies, cross-references, and table of contents entries:
         \begin{verbatim}
         lualatex ex04/main.tex
         lualatex ex04/main.tex
@@ -256,8 +256,8 @@ The compilation process, managed by the LaTeX Builder Agent, involves the follow
         lualatex ex04/main.tex
         \end{verbatim}
         The exact sequence of commands might depend on the specifics of the CLS template and any bibliography package used. A minimum of two runs is typically needed for ToC and references, often more for complex documents.
-    \item 	extbf{QA Checks:} Post-compilation, the QA agents (Structure, References, BiDi) are invoked to validate the generated PDF and LaTeX output.
-    \item 	extbf{Log Archiving:} All compilation logs (	exttt{.log} files) and QA reports are saved in the 	exttt{ex04/logs/} directory for inspection.
+    \item 	\textbf{QA Checks:} Post-compilation, the QA agents (Structure, References, BiDi) are invoked to validate the generated PDF and LaTeX output.
+    \item 	\textbf{Log Archiving:} All compilation logs (	\texttt{.log} files) and QA reports are saved in the 	\texttt{ex04/logs/} directory for inspection.
 \end{enumerate}
 This structured approach ensures that the document can be consistently generated and that any issues encountered during the process are identifiable and resolvable.
 
@@ -267,26 +267,26 @@ LaTeX compilation, especially with sophisticated engines like LuaLaTeX and custo
 
 Common types of LaTeX compilation errors include:
 \begin{itemize}
-    \item \textbf{Syntax Errors:} Incorrect LaTeX commands, missing braces, unmatched environments, unsafe inline examples, or typos in commands.
-    \item 	extbf{Undefined Control Sequences:} Using commands that are not recognized, often due to missing packages or typos.
-    \item 	extbf{Missing Files:} The compiler cannot find required files, such as images, bibliography data, or custom style files.
-    \item 	extbf{Package Conflicts:} Incompatible packages loaded into the document, leading to unpredictable behavior or outright failure.
-    \item 	extbf{Floats Placement Errors:} Issues with figures or tables not fitting on the page or causing layout problems.
-    \item 	extbf{Reference Errors:} Citations or cross-references to labels that do not exist or are not correctly processed.
-    \item 	extbf{Encoding Issues:} Problems with character encoding, especially when mixing different languages or special symbols.
+    \item \t\textbf{Syntax Errors:} Incorrect LaTeX commands, missing braces, unmatched environments, unsafe inline examples, or typos in commands.
+    \item 	\textbf{Undefined Control Sequences:} Using commands that are not recognized, often due to missing packages or typos.
+    \item 	\textbf{Missing Files:} The compiler cannot find required files, such as images, bibliography data, or custom style files.
+    \item 	\textbf{Package Conflicts:} Incompatible packages loaded into the document, leading to unpredictable behavior or outright failure.
+    \item 	\textbf{Floats Placement Errors:} Issues with figures or tables not fitting on the page or causing layout problems.
+    \item 	\textbf{Reference Errors:} Citations or cross-references to labels that do not exist or are not correctly processed.
+    \item 	\textbf{Encoding Issues:} Problems with character encoding, especially when mixing different languages or special symbols.
 \end{itemize}
 
 The error handling process typically involves:
 \begin{enumerate}
-    \item 	extbf{Capturing Output:} The LaTeX Builder Agent captures the standard output and error streams from the LuaLaTeX compiler. The 	exttt{.log} file generated by LaTeX is also a primary source of detailed error information.
-    \item 	extbf{Error Identification:} The agent parses these outputs to identify specific error messages, often indicated by lines starting with 	exttt{! LaTeX Error:} or similar. It attempts to pinpoint the error message, the relevant line number in the `.tex` file, and the context.
-    \item 	extbf{Reporting to Orchestrator:} Identified errors are reported back to the Orchestrator Agent. The Orchestrator then decides on the next course of action.
-    \item 	extbf{Recovery Strategies:} Depending on the error type, the Orchestrator might:
+    \item 	\textbf{Capturing Output:} The LaTeX Builder Agent captures the standard output and error streams from the LuaLaTeX compiler. The 	\texttt{.log} file generated by LaTeX is also a primary source of detailed error information.
+    \item 	\textbf{Error Identification:} The agent parses these outputs to identify specific error messages, often indicated by lines starting with 	\texttt{! LaTeX Error:} or similar. It attempts to pinpoint the error message, the relevant line number in the `.tex` file, and the context.
+    \item 	\textbf{Reporting to Orchestrator:} Identified errors are reported back to the Orchestrator Agent. The Orchestrator then decides on the next course of action.
+    \item 	\textbf{Recovery Strategies:} Depending on the error type, the Orchestrator might:
         \begin{itemize}
-            \item 	extbf{Retry Compilation:} For transient issues, a simple retry might suffice.
-            \item 	extbf{Modify Content:} If an error is due to malformed content generated by the Content Writer, the Orchestrator might request a revision of that content.
-            \item 	extbf{Adjust Compilation Flags:} Modify compilation commands if specific options are known to resolve certain issues.
-            \item 	extbf{Inform User:} If an error is unrecoverable by the agents, the user is notified with detailed diagnostic information.
+            \item 	\textbf{Retry Compilation:} For transient issues, a simple retry might suffice.
+            \item 	\textbf{Modify Content:} If an error is due to malformed content generated by the Content Writer, the Orchestrator might request a revision of that content.
+            \item 	\textbf{Adjust Compilation Flags:} Modify compilation commands if specific options are known to resolve certain issues.
+            \item 	\textbf{Inform User:} If an error is unrecoverable by the agents, the user is notified with detailed diagnostic information.
         \end{itemize}
 \end{enumerate}
 By systematically handling compilation errors, the system aims to produce a reliable output and provides valuable feedback for improving the generation process.
@@ -297,11 +297,11 @@ This section documents how feedback from prior stages or iterations of the assig
 
 Typical areas where feedback might lead to improvements include:
 \begin{itemize}
-    \item 	extbf{Content Relevance and Depth:} If previous content was deemed too superficial or not relevant enough, the Content Writer Agent's prompts would be refined to elicit more detailed and focused academic writing. This might involve providing more structured outlines or specific research directives.
-    \item 	extbf{Compilation Success Rate:} If compilation errors were frequent, the LaTeX Builder Agent's logic might be enhanced to include more robust error detection, logging, and potentially automated fixes for common issues. Ensuring the CLS template and 	exttt{references.bib} are correctly managed is also key.
-    \item 	extbf{QA Coverage and Accuracy:} Feedback on missed errors or false positives from QA agents would lead to adjustments in their logic. For instance, the QA References Agent might be updated to handle more complex citation styles or identify a wider range of reference errors.
-    \item 	extbf{Reproducibility:} If users struggled to reproduce the output, improvements would focus on refining the environment setup instructions, ensuring all dependencies are clearly listed (e.g., in 	exttt{requirements.txt}), and verifying that the compilation workflow is consistently applied.
-    \item 	extbf{Performance:} If the generation process was too slow, optimizations might be introduced, such as parallelizing independent tasks, refining agent prompts for efficiency, or investigating performance bottlenecks in the LaTeX compilation itself.
+    \item 	\textbf{Content Relevance and Depth:} If previous content was deemed too superficial or not relevant enough, the Content Writer Agent's prompts would be refined to elicit more detailed and focused academic writing. This might involve providing more structured outlines or specific research directives.
+    \item 	\textbf{Compilation Success Rate:} If compilation errors were frequent, the LaTeX Builder Agent's logic might be enhanced to include more robust error detection, logging, and potentially automated fixes for common issues. Ensuring the CLS template and 	\texttt{references.bib} are correctly managed is also key.
+    \item 	\textbf{QA Coverage and Accuracy:} Feedback on missed errors or false positives from QA agents would lead to adjustments in their logic. For instance, the QA References Agent might be updated to handle more complex citation styles or identify a wider range of reference errors.
+    \item 	\textbf{Reproducibility:} If users struggled to reproduce the output, improvements would focus on refining the environment setup instructions, ensuring all dependencies are clearly listed (e.g., in 	\texttt{requirements.txt}), and verifying that the compilation workflow is consistently applied.
+    \item 	\textbf{Performance:} If the generation process was too slow, optimizations might be introduced, such as parallelizing independent tasks, refining agent prompts for efficiency, or investigating performance bottlenecks in the LaTeX compilation itself.
 \end{itemize}
 By iteratively incorporating feedback, the system evolves towards a more reliable, efficient, and high-quality document generation solution, demonstrating a commitment to continuous improvement.
 
@@ -311,38 +311,38 @@ This checklist provides a set of criteria against which the performance and outp
 
 \subsection{Core Functionality}
 \begin{itemize}
-    \item [ ] 	extbf{End-to-End Generation:} The system successfully generates a PDF document from initial prompt/requirements.
-    \item [ ] 	extbf{Compilability:} The generated 	exttt{main.tex} compiles successfully using LuaLaTeX and BasicTeX without new packages.
-    \item [ ] 	extbf{Page Count:} The final PDF meets or approximates the target length (e.g., 50 pages) with substantial content.
-    \item [ ] 	extbf{No Filler Content:} Content is academically relevant and detailed, avoiding generic filler text.
-    \item [ ] 	extbf{No Hebrew Text (Yet):} Hebrew characters are not introduced prematurely.
+    \item [ ] 	\textbf{End-to-End Generation:} The system successfully generates a PDF document from initial prompt/requirements.
+    \item [ ] 	\textbf{Compilability:} The generated 	\texttt{main.tex} compiles successfully using LuaLaTeX and BasicTeX without new packages.
+    \item [ ] 	\textbf{Page Count:} The final PDF meets or approximates the target length (e.g., 50 pages) with substantial content.
+    \item [ ] 	\textbf{No Filler Content:} Content is academically relevant and detailed, avoiding generic filler text.
+    \item [ ] 	\textbf{No Hebrew Text (Yet):} Hebrew characters are not introduced prematurely.
 \end{itemize}
 
 \subsection{Content and Structure}
 \begin{itemize}
-    \item [ ] 	extbf{Assignment Requirements Covered:} All specified sections and subsections are present and adequately expanded.
-    \item [ ] 	extbf{Academic Style:} Content is written in a formal, academic tone.
-    \item [ ] 	extbf{Logical Flow:} Sections and paragraphs transition smoothly and logically.
-    \item [ ] 	extbf{Title Page and ToC:} Title page and Table of Contents are correctly generated and accurate.
-    \item [ ] 	extbf{Bibliography and Citations:} Citations are correctly formatted, and the bibliography is complete and accurate.
-    \item [ ] 	extbf{Cross-references:} Internal document references (figures, tables, sections) are correct.
+    \item [ ] 	\textbf{Assignment Requirements Covered:} All specified sections and subsections are present and adequately expanded.
+    \item [ ] 	\textbf{Academic Style:} Content is written in a formal, academic tone.
+    \item [ ] 	\textbf{Logical Flow:} Sections and paragraphs transition smoothly and logically.
+    \item [ ] 	\textbf{Title Page and ToC:} Title page and Table of Contents are correctly generated and accurate.
+    \item [ ] 	\textbf{Bibliography and Citations:} Citations are correctly formatted, and the bibliography is complete and accurate.
+    \item [ ] 	\textbf{Cross-references:} Internal document references (figures, tables, sections) are correct.
 \end{itemize}
 
 \subsection{Technical Implementation}
 \begin{itemize}
-    \item [ ] 	extbf{Orchestrator Logic:} The orchestrator correctly delegates tasks and manages workflow dependencies.
-    \item [ ] 	extbf{Skill Implementation:} Skills perform their intended functions reliably.
-    \item [ ] 	extbf{LaTeX Builder:} Compiles the document correctly and handles compilation errors gracefully.
-    \item [ ] 	extbf{QA Agents:} QA agents accurately identify structural, reference, and BiDi (potential) issues.
-    \item [ ] 	extbf{Repository Structure:} Files are organized logically within the repository.
-    \item [ ] 	extbf{Reproducibility:} The setup and compilation workflow are clearly documented and functional.
+    \item [ ] 	\textbf{Orchestrator Logic:} The orchestrator correctly delegates tasks and manages workflow dependencies.
+    \item [ ] 	\textbf{Skill Implementation:} Skills perform their intended functions reliably.
+    \item [ ] 	\textbf{LaTeX Builder:} Compiles the document correctly and handles compilation errors gracefully.
+    \item [ ] 	\textbf{QA Agents:} QA agents accurately identify structural, reference, and BiDi (potential) issues.
+    \item [ ] 	\textbf{Repository Structure:} Files are organized logically within the repository.
+    \item [ ] 	\textbf{Reproducibility:} The setup and compilation workflow are clearly documented and functional.
 \end{itemize}
 
 \subsection{Submission}
 \begin{itemize}
-    \item [ ] 	extbf{Version Control:} Changes are managed using Git with appropriate commit messages.
-    \item [ ] 	extbf{No Unauthorized Modifications:} Only 	exttt{ex04/main.tex} is modified. No other specified files are changed.
-    \item [ ] 	extbf{Deliverables:} All required files (source code, LaTeX, CLS, bib, logs) are present in the repository.
+    \item [ ] 	\textbf{Version Control:} Changes are managed using Git with appropriate commit messages.
+    \item [ ] 	\textbf{No Unauthorized Modifications:} Only 	\texttt{ex04/main.tex} is modified. No other specified files are changed.
+    \item [ ] 	\textbf{Deliverables:} All required files (source code, LaTeX, CLS, bib, logs) are present in the repository.
 \end{itemize}
 This checklist serves as a guide for self-assessment and final review before submission.
 
@@ -352,12 +352,12 @@ Despite the comprehensive nature of the agentic PDF generation framework, severa
 
 Key limitations include:
 \begin{itemize}
-    \item 	extbf{Content Generation Sophistication:} While the Content Writer Agent aims for academic quality, it may not achieve the depth, nuance, or originality of human expert writing. Generating truly novel research or highly complex theoretical arguments might be beyond its current capabilities. The reliance on prompts means output quality is heavily dependent on prompt engineering.
-    \item 	extbf{Dynamic Asset Generation:} The current framework primarily focuses on text and structure. Generating complex figures, graphs, or custom LaTeX tables dynamically based on data inputs is not explicitly implemented, though placeholders exist. The framework relies on pre-existing or manually created assets.
-    \item 	extbf{Error Recovery Complexity:} While basic error handling for compilation is in place, complex LaTeX errors or subtle logical flaws in generated content might be difficult for agents to automatically resolve, potentially requiring manual intervention. The ability to recover from all possible failure modes is challenging.
-    \item 	extbf{Environment Specificity:} While aiming for reproducibility, perfect replication across all environments can still be challenging. Subtle differences in LaTeX distributions, package versions, or operating system configurations might lead to minor variations in output. The reliance on specific tool versions (e.g., LuaLaTeX version) can be a factor.
-    \item 	extbf{Real-time Interaction Limitations:} The system operates in a batch processing mode. It is not designed for real-time, interactive document editing or collaborative writing in the way a human user might experience with a word processor.
-    \item 	extbf{Limited Understanding of Nuance:} Agents may struggle with highly nuanced instructions, implicit requirements, or understanding the broader context of a document in the same way a human author would.
+    \item 	\textbf{Content Generation Sophistication:} While the Content Writer Agent aims for academic quality, it may not achieve the depth, nuance, or originality of human expert writing. Generating truly novel research or highly complex theoretical arguments might be beyond its current capabilities. The reliance on prompts means output quality is heavily dependent on prompt engineering.
+    \item 	\textbf{Dynamic Asset Generation:} The current framework primarily focuses on text and structure. Generating complex figures, graphs, or custom LaTeX tables dynamically based on data inputs is not explicitly implemented, though placeholders exist. The framework relies on pre-existing or manually created assets.
+    \item 	\textbf{Error Recovery Complexity:} While basic error handling for compilation is in place, complex LaTeX errors or subtle logical flaws in generated content might be difficult for agents to automatically resolve, potentially requiring manual intervention. The ability to recover from all possible failure modes is challenging.
+    \item 	\textbf{Environment Specificity:} While aiming for reproducibility, perfect replication across all environments can still be challenging. Subtle differences in LaTeX distributions, package versions, or operating system configurations might lead to minor variations in output. The reliance on specific tool versions (e.g., LuaLaTeX version) can be a factor.
+    \item 	\textbf{Real-time Interaction Limitations:} The system operates in a batch processing mode. It is not designed for real-time, interactive document editing or collaborative writing in the way a human user might experience with a word processor.
+    \item 	\textbf{Limited Understanding of Nuance:} Agents may struggle with highly nuanced instructions, implicit requirements, or understanding the broader context of a document in the same way a human author would.
 \end{itemize}
 These limitations highlight areas where further research and development are needed to achieve fully autonomous and human-level quality in document generation.
 
@@ -367,19 +367,19 @@ The current framework provides a solid foundation for agentic PDF generation. Ho
 
 Potential areas for future development include:
 \begin{itemize}
-    \item 	extbf{Advanced Content Generation:} Enhance the Content Writer Agent with more sophisticated reasoning capabilities, enabling it to synthesize information from multiple sources, perform critical analysis, and generate more original or research-oriented content. Integrate with larger, more capable language models.
-    \item 	extbf{Dynamic Asset Creation:} Develop agents capable of automatically generating figures, charts, and complex tables based on data inputs. This would involve integrating with plotting libraries or data visualization tools.
-    \item 	extbf{Multi-lingual Support:} Fully implement BiDi support and extend the framework to generate documents in multiple languages, including automatic translation and adaptation of cultural/linguistic conventions.
-    \item 	extbf{Interactive Refinement:} Introduce a feedback loop where the orchestrator can solicit specific user input or clarification during the generation process, allowing for more guided and interactive document creation.
-    \item 	extbf{Enhanced Error Resolution:} Develop more sophisticated strategies for automatic error correction during LaTeX compilation, potentially using machine learning models trained on common LaTeX errors.
-    \item 	extbf{Version Management Integration:} Tighter integration with version control systems, such as automated branching, commit message generation, and PR creation based on generation milestones.
-    \item 	extbf{GUI/Web Interface:} Develop a user-friendly interface for configuring generation tasks, managing skills, and monitoring the progress of document generation.
-    \item 	extbf{Template Learning:} Enable agents to learn and adapt to new CLS templates or style guides, increasing the framework's flexibility across different academic disciplines or publication venues.
+    \item 	\textbf{Advanced Content Generation:} Enhance the Content Writer Agent with more sophisticated reasoning capabilities, enabling it to synthesize information from multiple sources, perform critical analysis, and generate more original or research-oriented content. Integrate with larger, more capable language models.
+    \item 	\textbf{Dynamic Asset Creation:} Develop agents capable of automatically generating figures, charts, and complex tables based on data inputs. This would involve integrating with plotting libraries or data visualization tools.
+    \item 	\textbf{Multi-lingual Support:} Fully implement BiDi support and extend the framework to generate documents in multiple languages, including automatic translation and adaptation of cultural/linguistic conventions.
+    \item 	\textbf{Interactive Refinement:} Introduce a feedback loop where the orchestrator can solicit specific user input or clarification during the generation process, allowing for more guided and interactive document creation.
+    \item 	\textbf{Enhanced Error Resolution:} Develop more sophisticated strategies for automatic error correction during LaTeX compilation, potentially using machine learning models trained on common LaTeX errors.
+    \item 	\textbf{Version Management Integration:} Tighter integration with version control systems, such as automated branching, commit message generation, and PR creation based on generation milestones.
+    \item 	\textbf{GUI/Web Interface:} Develop a user-friendly interface for configuring generation tasks, managing skills, and monitoring the progress of document generation.
+    \item 	\textbf{Template Learning:} Enable agents to learn and adapt to new CLS templates or style guides, increasing the framework's flexibility across different academic disciplines or publication venues.
 \end{itemize}
 These advancements would push the boundaries of automated document generation, making it a more powerful tool for researchers, students, and professionals alike.
 
-% Appendices - Use \newpage to separate major sections
-\newpage
+% Appendices - Use \n\newpage to separate major sections
+\n\newpage
 \appendix
 
 % 21. Appendix A: Agent Prompts
@@ -403,7 +403,7 @@ Example shell command for compilation (executed by the agent):
 \begin{verbatim}
 lualatex --interaction=nonstopmode --output-directory=ex04 ex04/main.tex
 \end{verbatim}
-Note: The 	exttt{--interaction=nonstopmode} flag prevents LaTeX from pausing on errors, allowing the agent to capture all errors in the log. The output directory is specified to keep build artifacts organized. Multiple runs and potentially 	exttt{bibtex} or 	exttt{biber} would be chained.
+Note: The 	\texttt{--interaction=nonstopmode} flag prevents LaTeX from pausing on errors, allowing the agent to capture all errors in the log. The output directory is specified to keep build artifacts organized. Multiple runs and potentially 	\texttt{bibtex} or 	\texttt{biber} would be chained.
 
 \subsection{QA Structure Agent - Check Example}
 Prompt for the QA Structure Agent:
@@ -412,7 +412,7 @@ Analyze the generated LaTeX document 'ex04/main.tex' and its compilation log 'ex
 Verify the following:
 - All required sections (1-24) and subsections are present.
 - Sections are in the correct order as per assignment requirements.
-- Page breaks (	exttt{\newpage}) are used appropriately between major sections (e.g., before Appendices).
+- Page breaks (	\texttt{\n\newpage}) are used appropriately between major sections (e.g., before Appendices).
 - The Table of Contents accurately reflects the document's structure and pagination.
 Report any structural anomalies, missing elements, or incorrect ordering.
 \end{verbatim}
@@ -426,7 +426,7 @@ This detailed checklist is used by the QA agents to systematically evaluate the 
     \item [ ] Section titles match assignment list.
     \item [ ] Section order is correct.
     \item [ ] Subsections are appropriately nested and labeled.
-    \item [ ] 	exttt{\newpage} usage is consistent with logical breaks.
+    \item [ ] 	\texttt{\n\newpage} usage is consistent with logical breaks.
     \item [ ] Table of Contents (ToC) is generated and accurate (sections, pagination).
     \item [ ] Page numbers are consistent and sequential.
     \item [ ] Document begins with title page and ToC.
@@ -444,23 +444,23 @@ This detailed checklist is used by the QA agents to systematically evaluate the 
 
 \subsection{Referencing QA}
 \begin{itemize}
-    \item [ ] All in-text citations (	exttt{\cite\{...\} } ) have corresponding bibliography entries.
+    \item [ ] All in-text citations (	\texttt{\cite\{...\} } ) have corresponding bibliography entries.
     \item [ ] All bibliography entries are cited at least once.
     \item [ ] Citation keys are valid and correctly spelled.
     \item [ ] Bibliography entries follow the required format (per CLS template).
-    \item [ ] Cross-references (	exttt{
+    \item [ ] Cross-references (	\texttt{
 ef\{...\} } ) point to correct labels.
     \item [ ] Referenced labels (figures, tables, sections) exist.
-    \item [ ] Bibliography compiled correctly (e.g., using 	exttt{biblatex} or 	exttt{natbib} as managed by CLS).
+    \item [ ] Bibliography compiled correctly (e.g., using 	\texttt{biblatex} or 	\texttt{natbib} as managed by CLS).
 \end{itemize}
 
 \subsection{Compilation QA}
 \begin{itemize}
     \item [ ] Document compiles successfully with LuaLaTeX (multiple passes).
-    \item [ ] Compilation log (	exttt{.log}) is reviewed for errors or warnings.
+    \item [ ] Compilation log (	\texttt{.log}) is reviewed for errors or warnings.
     \item [ ] No undefined control sequences or packages.
     \item [ ] External files (images, bib) are correctly referenced and found.
-    \item [ ] 	exttt{custom-academic-template.cls} is correctly applied.
+    \item [ ] 	\texttt{custom-academic-template.cls} is correctly applied.
 \end{itemize}
 
 \subsection{BiDi QA (Proactive/Future)}
@@ -477,115 +477,115 @@ Encountering compilation errors is a common part of working with LaTeX. This sec
 \subsection{Common Errors and Solutions}
 
 \subsubsection{Undefined Control Sequence / Unknown Command}
-    	extbf{Symptom:} 	exttt{! Undefined control sequence.} or 	exttt{! LaTeX Error: Unknown command 	extbackslash commandname.}
-    	extbf{Cause:} A command was used that is not defined, either because it's misspelled, requires a package not loaded, or is from a package not installed.
-    	extbf{Solution:}
+    	\textbf{Symptom:} 	\texttt{! Undefined control sequence.} or 	\texttt{! LaTeX Error: Unknown command 	extbackslash commandname.}
+    	\textbf{Cause:} A command was used that is not defined, either because it's misspelled, requires a package not loaded, or is from a package not installed.
+    	\textbf{Solution:}
     \begin{itemize}
         \item Check for typos in the command name.
-        \item Ensure the required package is loaded in 	exttt{custom-academic-template.cls}. If not, and adding packages is allowed, add 	exttt{\usepackage\{packagename\}}.
-        \item Verify that the package is installed in your LaTeX distribution (e.g., via 	exttt{tlmgr install packagename} if using TeX Live, or managed by BasicTeX).
+        \item Ensure the required package is loaded in 	\texttt{custom-academic-template.cls}. If not, and adding packages is allowed, add 	\texttt{\usepackage\{packagename\}}.
+        \item Verify that the package is installed in your LaTeX distribution (e.g., via 	\texttt{tlmgr install packagename} if using TeX Live, or managed by BasicTeX).
     \end{itemize}
 
 \subsubsection{File Not Found}
-    	extbf{Symptom:} 	exttt{File `filename.ext' not found.}
-    	extbf{Cause:} The LaTeX compiler cannot locate a required file (e.g., an image, a bibliography file, or a style file).
-    	extbf{Solution:}
+    	\textbf{Symptom:} 	\texttt{File `filename.ext' not found.}
+    	\textbf{Cause:} The LaTeX compiler cannot locate a required file (e.g., an image, a bibliography file, or a style file).
+    	\textbf{Solution:}
     \begin{itemize}
         \item Ensure the file exists at the specified path relative to the main `.tex` file or the specified output directory.
-        \item Check that the file path in the LaTeX command (e.g., 	exttt{\includegraphics\{path/to/image.png\}}) is correct.
+        \item Check that the file path in the LaTeX command (e.g., 	\texttt{\includegraphics\{path/to/image.png\}}) is correct.
         \item Verify that intermediate build artifacts are not preventing access if compilation is complex.
     \end{itemize}
 
 \subsubsection{Missing Bibliography Entry / Undefined Citation}
-    	extbf{Symptom:} 	exttt{LaTeX Warning: Citation `key' on page X undefined on input line Y.} or 	exttt{There were undefined citations.}
-    	extbf{Cause:} A citation key used in the text does not exist in the bibliography file, or the bibliography was not processed correctly.
-    	extbf{Solution:}
+    	\textbf{Symptom:} 	\texttt{LaTeX Warning: Citation `key' on page X undefined on input line Y.} or 	\texttt{There were undefined citations.}
+    	\textbf{Cause:} A citation key used in the text does not exist in the bibliography file, or the bibliography was not processed correctly.
+    	\textbf{Solution:}
     \begin{itemize}
-        \item Ensure the citation key used in 	exttt{\cite\{key\}} exactly matches an entry's key in 	exttt{references.bib}.
-        \item Verify that the bibliography processing steps (e.g., running 	exttt{bibtex} or 	exttt{biber}, depending on the CLS setup) are executed correctly as part of the compilation workflow. Multiple 	exttt{lualatex} runs are essential.
+        \item Ensure the citation key used in 	\texttt{\cite\{key\}} exactly matches an entry's key in 	\texttt{references.bib}.
+        \item Verify that the bibliography processing steps (e.g., running 	\texttt{bibtex} or 	\texttt{biber}, depending on the CLS setup) are executed correctly as part of the compilation workflow. Multiple 	\texttt{lualatex} runs are essential.
     \end{itemize}
 
 \subsubsection{Package Errors / Conflicts}
-    	extbf{Symptom:} Errors related to package options, 	exttt{Redefinition} warnings, or general compilation failure after loading a package.
-    	extbf{Cause:} Packages might have incompatible options or conflict with each other.
-    	extbf{Solution:}
+    	\textbf{Symptom:} Errors related to package options, 	\texttt{Redefinition} warnings, or general compilation failure after loading a package.
+    	\textbf{Cause:} Packages might have incompatible options or conflict with each other.
+    	\textbf{Solution:}
     \begin{itemize}
         \item Consult the documentation for the conflicting packages.
-        \item Simplify package loading in 	exttt{custom-academic-template.cls}. If a package is not strictly necessary, remove it.
+        \item Simplify package loading in 	\texttt{custom-academic-template.cls}. If a package is not strictly necessary, remove it.
         \item Ensure packages are loaded in a sensible order.
     \end{itemize}
 
 \subsubsection{Infinite Loops}
-    	extbf{Symptom:} Compilation seems to hang or repeat indefinitely, often with repetitive output.
-    	extbf{Cause:} Typically caused by recursive definitions, incorrect cross-referencing, or issues with packages that modify document flow.
-    	extbf{Solution:}
+    	\textbf{Symptom:} Compilation seems to hang or repeat indefinitely, often with repetitive output.
+    	\textbf{Cause:} Typically caused by recursive definitions, incorrect cross-referencing, or issues with packages that modify document flow.
+    	\textbf{Solution:}
     \begin{itemize}
         \item Examine the log file for repetitive patterns.
         \item Simplify the document by commenting out sections or disabling specific packages to isolate the cause.
-        \item Check for incorrect use of 	exttt{\label} and 	exttt{
+        \item Check for incorrect use of 	\texttt{\label} and 	\texttt{
 ef}.
     \end{itemize}
 
 \subsection{Debugging Strategy}
 When errors occur, the following strategy is recommended:
 \begin{enumerate}
-    \item 	extbf{Examine the Log File:} Always start by inspecting 	exttt{ex04/main.log} for the most detailed error messages.
-    \item 	extbf{Isolate the Error:} Use 	exttt{--interaction=nonstopmode} to see all errors, or temporarily comment out sections of the 	exttt{.tex} file to determine which part triggers the error.
-    \item 	extbf{Incremental Compilation:} Compile smaller parts of the document or known working examples to verify components.
-    \item 	extbf{Consult Documentation:} Refer to the LaTeX Companion, package documentation, or online resources (like TeX Stack Exchange) for specific error messages.
+    \item 	\textbf{Examine the Log File:} Always start by inspecting 	\texttt{ex04/main.log} for the most detailed error messages.
+    \item 	\textbf{Isolate the Error:} Use 	\texttt{--interaction=nonstopmode} to see all errors, or temporarily comment out sections of the 	\texttt{.tex} file to determine which part triggers the error.
+    \item 	\textbf{Incremental Compilation:} Compile smaller parts of the document or known working examples to verify components.
+    \item 	\textbf{Consult Documentation:} Refer to the LaTeX Companion, package documentation, or online resources (like TeX Stack Exchange) for specific error messages.
 \end{enumerate}
 
 % 24. Appendix D: Repository File Inventory
 \section{Appendix D: Repository File Inventory}
 This appendix provides a comprehensive inventory of files within the project repository relevant to Assignment 04, detailing their purpose and location.
 
-\subsection{Core Assignment Files (	exttt{ex04/})}
+\subsection{Core Assignment Files (	\texttt{ex04/})}
 \begin{itemize}
-    \item 	exttt{ex04/main.tex}: The main LaTeX source document for the academic report. Contains document structure, content, and commands.
-    \item 	exttt{ex04/custom-academic-template.cls}: The custom LaTeX document class defining the report's styling, layout, and core functionalities.
-    \item 	exttt{ex04/references.bib}: The BibTeX file containing all bibliographic entries cited in the document.
-    \item 	exttt{ex04/assets/}: Directory for supporting media.
+    \item 	\texttt{ex04/main.tex}: The main LaTeX source document for the academic report. Contains document structure, content, and commands.
+    \item 	\texttt{ex04/custom-academic-template.cls}: The custom LaTeX document class defining the report's styling, layout, and core functionalities.
+    \item 	\texttt{ex04/references.bib}: The BibTeX file containing all bibliographic entries cited in the document.
+    \item 	\texttt{ex04/assets/}: Directory for supporting media.
         \begin{itemize}
-            \item 	exttt{ex04/assets/graphs/}: Placeholder for generated or sourced graphs.
-            \item 	exttt{ex04/assets/images/}: Directory for image files.
+            \item 	\texttt{ex04/assets/graphs/}: Placeholder for generated or sourced graphs.
+            \item 	\texttt{ex04/assets/images/}: Directory for image files.
         \end{itemize}
-    \item 	exttt{ex04/logs/}: Directory for storing logs generated during the process.
+    \item 	\texttt{ex04/logs/}: Directory for storing logs generated during the process.
         \begin{itemize}
-            \item 	exttt{ex04/logs/generation\_log.md}: Logs pertaining to content generation.
-            \item 	exttt{ex04/logs/qa\_report.md}: Summaries of quality assurance checks.
+            \item 	\texttt{ex04/logs/generation\_log.md}: Logs pertaining to content generation.
+            \item 	\texttt{ex04/logs/qa\_report.md}: Summaries of quality assurance checks.
         \end{itemize}
-    \item 	exttt{ex04/screenshots/}: Directory for visual documentation of intermediate or final outputs.
+    \item 	\texttt{ex04/screenshots/}: Directory for visual documentation of intermediate or final outputs.
 \end{itemize}
 
-\subsection{Agent Skills (	exttt{ex04/skills/})}
+\subsection{Agent Skills (	\texttt{ex04/skills/})}
 \begin{itemize}
-    \item 	exttt{ex04/skills/content\_writer\_skill.md}: Defines the capabilities and instructions for the Content Writer Agent.
-    \item 	exttt{ex04/skills/latex\_builder\_skill.md}: Defines the capabilities and instructions for the LaTeX Builder Agent.
-    \item 	exttt{ex04/skills/qa\_structure\_skill.md}: Defines instructions for the QA Structure Agent.
-    \item 	exttt{ex04/skills/qa\_references\_skill.md}: Defines instructions for the QA References Agent.
-    \item 	exttt{ex04/skills/qa\_bidi\_skill.md}: Defines instructions for the QA BiDi Agent.
-    \item 	exttt{ex04/skills/orchestrator\_skill.md}: Defines instructions for the Orchestrator Agent.
+    \item 	\texttt{ex04/skills/content\_writer\_skill.md}: Defines the capabilities and instructions for the Content Writer Agent.
+    \item 	\texttt{ex04/skills/latex\_builder\_skill.md}: Defines the capabilities and instructions for the LaTeX Builder Agent.
+    \item 	\texttt{ex04/skills/qa\_structure\_skill.md}: Defines instructions for the QA Structure Agent.
+    \item 	\texttt{ex04/skills/qa\_references\_skill.md}: Defines instructions for the QA References Agent.
+    \item 	\texttt{ex04/skills/qa\_bidi\_skill.md}: Defines instructions for the QA BiDi Agent.
+    \item 	\texttt{ex04/skills/orchestrator\_skill.md}: Defines instructions for the Orchestrator Agent.
 \end{itemize}
 
-\subsection{Agent Source Code (	exttt{ex04/src/})}
+\subsection{Agent Source Code (	\texttt{ex04/src/})}
 \begin{itemize}
-    \item 	exttt{ex04/src/orchestrator.py}: The main Python script implementing the Orchestrator Agent's logic.
-    \item 	exttt{ex04/src/compile\_pdf.py}: Python script for the LaTeX Builder Agent's compilation tasks.
-    \item 	exttt{ex04/src/qa\_check.py}: Python script containing logic for various QA agents.
-    \item 	exttt{ex04/src/\_\_init\_\_.py}: Python package initialization file.
+    \item 	\texttt{ex04/src/orchestrator.py}: The main Python script implementing the Orchestrator Agent's logic.
+    \item 	\texttt{ex04/src/compile\_pdf.py}: Python script for the LaTeX Builder Agent's compilation tasks.
+    \item 	\texttt{ex04/src/qa\_check.py}: Python script containing logic for various QA agents.
+    \item 	\texttt{ex04/src/\_\_init\_\_.py}: Python package initialization file.
 \end{itemize}
 
 \subsection{Project Root Files}
 \begin{itemize}
-    \item 	exttt{README.md}: Top-level project README.
-    \item 	exttt{.gitignore}: Git ignore rules for the repository.
-    \item 	exttt{requirements.txt}: Lists Python dependencies for the project. (Assumed to exist or be created).
+    \item 	\texttt{README.md}: Top-level project README.
+    \item 	\texttt{.gitignore}: Git ignore rules for the repository.
+    \item 	\texttt{requirements.txt}: Lists Python dependencies for the project. (Assumed to exist or be created).
 \end{itemize}
 
 \subsection{Other Assignment Directories}
 \begin{itemize}
-    \item 	exttt{ex02/}: Files from Assignment 02.
-    \item 	exttt{ex03/}: Files from Assignment 03.
+    \item 	\texttt{ex02/}: Files from Assignment 02.
+    \item 	\texttt{ex03/}: Files from Assignment 03.
 \end{itemize}
 This inventory provides a map of the project's structure, ensuring all components are accounted for and accessible.
 
@@ -597,27 +597,27 @@ The development of this agentic PDF generation system for Assignment 04 is signi
 \subsection{From Basic Agentic Workflows (e.g., Assignment 02)}
 Assignment 02, focusing on foundational agentic interactions, provided initial insights into the complexities of prompt engineering and inter-agent communication.
 \begin{itemize}
-    \item \textbf{Prompt Sensitivity and Specificity:} A primary lesson was the extreme sensitivity of agent output to prompt wording. Vague or ambiguous instructions consistently led to suboptimal or irrelevant responses. This underscored the necessity for hyper-specific and constrained prompts, a principle directly applied in the design of the Content Writer Agent's prompts for Assignment 04 (see Appendix A).
-    \item \textbf{Iterative Refinement of Agent Behavior:} Early experiences demonstrated that achieving desired agent behavior is rarely a one-shot process. It requires continuous observation of agent outputs, identification of deviations, and iterative refinement of prompts or underlying agent logic. This led to the explicit inclusion of feedback loops and QA stages in the current orchestrator design.
-    \item \textbf{Managing Context Window Limitations:} Initial attempts often struggled with agents forgetting previous turns or exceeding context window limits. This highlighted the importance of designing agents to process information efficiently and the orchestrator to strategically manage the flow of context, avoiding redundant information.
+    \item \t\textbf{Prompt Sensitivity and Specificity:} A primary lesson was the extreme sensitivity of agent output to prompt wording. Vague or ambiguous instructions consistently led to suboptimal or irrelevant responses. This underscored the necessity for hyper-specific and constrained prompts, a principle directly applied in the design of the Content Writer Agent's prompts for Assignment 04 (see Appendix A).
+    \item \t\textbf{Iterative Refinement of Agent Behavior:} Early experiences demonstrated that achieving desired agent behavior is rarely a one-shot process. It requires continuous observation of agent outputs, identification of deviations, and iterative refinement of prompts or underlying agent logic. This led to the explicit inclusion of feedback loops and QA stages in the current orchestrator design.
+    \item \t\textbf{Managing Context Window Limitations:} Initial attempts often struggled with agents forgetting previous turns or exceeding context window limits. This highlighted the importance of designing agents to process information efficiently and the orchestrator to strategically manage the flow of context, avoiding redundant information.
 \end{itemize}
 
 \subsection{From API Integration and Service Orchestration (e.g., Assignment 03)}
 Assignment 03, involving the integration with external APIs and the orchestration of more complex service flows, contributed valuable lessons in system reliability, error handling, and modularity.
 \begin{itemize}
-    \item \textbf{Robust Error Handling in External Interactions:} Interacting with external services (like Gmail or Calendar APIs) inevitably exposed the system to network failures, API rate limits, and unexpected response formats. This reinforced the need for comprehensive error handling mechanisms, graceful degradation, and retry logic within agent interactions. The LaTeX Builder Agent's error handling for compilation (Appendix C) directly benefits from this experience.
-    \item \textbf{Modularity for Maintainability and Testability:} Building systems with distinct, loosely coupled components (e.g., separate Gmail and Calendar services) proved critical for isolating bugs and facilitating independent development. This lesson is reflected in the modular design of agents and skills in Assignment 04, where each skill is a self-contained unit.
-    \item \textbf{Importance of Environment Configuration:} Ensuring consistent API keys, environment variables, and dependency installations (e.g., \texttt{requirements.txt}) was a recurring challenge. This led to a stronger emphasis on detailed setup and compilation workflows (Section 15) and clear repository documentation (Appendix D) for Assignment 04.
-    \item \textbf{Security Best Practices:} Handling sensitive credentials (API keys, tokens) necessitated strict adherence to security protocols, such as using environment variables and avoiding hardcoding. This principle is implicitly embedded in the design, ensuring that sensitive information is never exposed in logs or source code.
+    \item \t\textbf{Robust Error Handling in External Interactions:} Interacting with external services (like Gmail or Calendar APIs) inevitably exposed the system to network failures, API rate limits, and unexpected response formats. This reinforced the need for comprehensive error handling mechanisms, graceful degradation, and retry logic within agent interactions. The LaTeX Builder Agent's error handling for compilation (Appendix C) directly benefits from this experience.
+    \item \t\textbf{Modularity for Maintainability and Testability:} Building systems with distinct, loosely coupled components (e.g., separate Gmail and Calendar services) proved critical for isolating bugs and facilitating independent development. This lesson is reflected in the modular design of agents and skills in Assignment 04, where each skill is a self-contained unit.
+    \item \t\textbf{Importance of Environment Configuration:} Ensuring consistent API keys, environment variables, and dependency installations (e.g., \t\texttt{requirements.txt}) was a recurring challenge. This led to a stronger emphasis on detailed setup and compilation workflows (Section 15) and clear repository documentation (Appendix D) for Assignment 04.
+    \item \t\textbf{Security Best Practices:} Handling sensitive credentials (API keys, tokens) necessitated strict adherence to security protocols, such as using environment variables and avoiding hardcoding. This principle is implicitly embedded in the design, ensuring that sensitive information is never exposed in logs or source code.
 \end{itemize}
 
 \subsection{General Insights for Agentic System Development}
 Beyond specific assignments, broader lessons emerged regarding the nature of agentic systems.
 \begin{itemize}
-    \item \textbf{The Orchestrator as the Central Intelligence:} The orchestrator's role evolved from a simple task dispatcher to a sophisticated manager of goals, dependencies, and recovery strategies. Its ability to dynamically adapt to unforeseen circumstances is crucial.
-    \item \textbf{Validation as a Continuous Process:} Relying solely on final output validation is insufficient. Continuous, incremental validation (e.g., through QA agents after each major step) helps identify and rectify issues early, reducing debugging costs. This is evident in the detailed QA checklists (Appendix B) and the integration of QA agents throughout the workflow.
-    \item \textbf{Reproducibility as a Design Goal:} From the outset, designing for reproducibility (consistent environments, clear version control, detailed documentation) became a non-negotiable requirement rather than an afterthought. This permeates the entire Assignment 04 project.
-    \item \textbf{Human-in-the-Loop Considerations:} While aiming for autonomy, recognizing when human intervention is necessary (e.g., for complex error resolution or creative decisions) is vital. Agents should be designed to escalate issues with rich diagnostic information.
+    \item \t\textbf{The Orchestrator as the Central Intelligence:} The orchestrator's role evolved from a simple task dispatcher to a sophisticated manager of goals, dependencies, and recovery strategies. Its ability to dynamically adapt to unforeseen circumstances is crucial.
+    \item \t\textbf{Validation as a Continuous Process:} Relying solely on final output validation is insufficient. Continuous, incremental validation (e.g., through QA agents after each major step) helps identify and rectify issues early, reducing debugging costs. This is evident in the detailed QA checklists (Appendix B) and the integration of QA agents throughout the workflow.
+    \item \t\textbf{Reproducibility as a Design Goal:} From the outset, designing for reproducibility (consistent environments, clear version control, detailed documentation) became a non-negotiable requirement rather than an afterthought. This permeates the entire Assignment 04 project.
+    \item \t\textbf{Human-in-the-Loop Considerations:} While aiming for autonomy, recognizing when human intervention is necessary (e.g., for complex error resolution or creative decisions) is vital. Agents should be designed to escalate issues with rich diagnostic information.
 \end{itemize}
 These accumulated lessons from previous assignments have profoundly influenced the design and implementation of the current agentic PDF generation system, contributing to its robustness, maintainability, and ability to meet the stringent academic requirements.
 
@@ -628,28 +628,28 @@ Ensuring the reproducibility of an academic report and preparing it for submissi
 \subsection{Achieving Reproducibility}
 Reproducibility, in the context of this project, means that any researcher or evaluator should be able to obtain the identical PDF document by following the documented setup and compilation workflow, given the same source code and inputs.
 \begin{itemize}
-    \item \textbf{Version-Controlled Source Code:} All source files, including \texttt{main.tex}, \texttt{custom-academic-template.cls}, \texttt{references.bib}, agent scripts (in \texttt{src/}), and skill definitions (in \texttt{skills/}), are maintained under Git version control. This ensures that the exact state of the project at any given time can be retrieved.
-    \item \textbf{Declarative Environment Setup:} The \texttt{requirements.txt} file precisely lists all Python dependencies, allowing for the recreation of the exact Python environment. Similarly, the reliance on BasicTeX and LuaLaTeX (standard distributions) with clear installation instructions minimizes environmental variability.
-    \item \textbf{Explicit Compilation Workflow:} The "Setup and Compilation Workflow" (Section 15) provides a step-by-step guide to building the document from source. This includes the precise LuaLaTeX commands and the sequence of execution required to resolve all references and generate the final PDF.
-    \item \textbf{Immutable Template and Bibliography:} The \texttt{custom-academic-template.cls} and \texttt{references.bib} files are treated as stable, immutable components (as per assignment rules), ensuring that stylistic and bibliographic consistency is maintained across all compilations.
-    \item \textbf{Comprehensive Logging:} Detailed logs (in \texttt{ex04/logs/}) for content generation and QA checks provide an auditable trail of the document's creation, aiding in diagnosing any deviations during reproduction attempts.
+    \item \t\textbf{Version-Controlled Source Code:} All source files, including \t\texttt{main.tex}, \t\texttt{custom-academic-template.cls}, \t\texttt{references.bib}, agent scripts (in \t\texttt{src/}), and skill definitions (in \t\texttt{skills/}), are maintained under Git version control. This ensures that the exact state of the project at any given time can be retrieved.
+    \item \t\textbf{Declarative Environment Setup:} The \t\texttt{requirements.txt} file precisely lists all Python dependencies, allowing for the recreation of the exact Python environment. Similarly, the reliance on BasicTeX and LuaLaTeX (standard distributions) with clear installation instructions minimizes environmental variability.
+    \item \t\textbf{Explicit Compilation Workflow:} The "Setup and Compilation Workflow" (Section 15) provides a step-by-step guide to building the document from source. This includes the precise LuaLaTeX commands and the sequence of execution required to resolve all references and generate the final PDF.
+    \item \t\textbf{Immutable Template and Bibliography:} The \t\texttt{custom-academic-template.cls} and \t\texttt{references.bib} files are treated as stable, immutable components (as per assignment rules), ensuring that stylistic and bibliographic consistency is maintained across all compilations.
+    \item \t\textbf{Comprehensive Logging:} Detailed logs (in \t\texttt{ex04/logs/}) for content generation and QA checks provide an auditable trail of the document's creation, aiding in diagnosing any deviations during reproduction attempts.
 \end{itemize}
 By meticulously controlling these factors, the system aims to eliminate sources of variability, thereby guaranteeing that the generated PDF is a faithful and reproducible artifact of the agentic process.
 
 \subsection{Submission Readiness Checklist}
 A thorough submission readiness checklist ensures that all deliverables are complete, correctly formatted, and easily verifiable by the recipient.
 \begin{itemize}
-    \item \textbf{Final PDF Generation:} Confirm that the \texttt{main.pdf} in the \texttt{ex04/} directory is the latest compiled version and meets all page count and quality requirements.
-    \item \textbf{Clean Repository State:} Ensure the Git repository is in a clean state, with all relevant changes committed and no untracked files that are part of the submission. The \texttt{.gitignore} file should effectively exclude build artifacts.
-    \item \textbf{Comprehensive Documentation:} Verify that the \texttt{README.md} at the project root and any in-line comments in code or skill definitions provide sufficient information for understanding, running, and evaluating the project.
-    \item \textbf{Adherence to Assignment Constraints:} Double-check all strict rules, such as "modify only \texttt{ex04/main.tex}", "no new LaTeX packages", and "no Hebrew text", have been rigorously followed.
-    \item \textbf{Included Logs and Reports:} Ensure that \texttt{ex04/logs/generation\_log.md} and \texttt{ex04/logs/qa\_report.md} are current and included, providing a summary of agent activities and quality checks.
-    \item \textbf{Dependency Manifest:} Confirm \texttt{requirements.txt} is present and accurately lists all Python package dependencies required for the agent scripts.
-    \item \textbf{Clarity of Purpose:} The entire submission clearly articulates the assignment's objectives, the agentic architecture, and the methodologies employed, as detailed in the main body and appendices of the report.
+    \item \t\textbf{Final PDF Generation:} Confirm that the \t\texttt{main.pdf} in the \t\texttt{ex04/} directory is the latest compiled version and meets all page count and quality requirements.
+    \item \t\textbf{Clean Repository State:} Ensure the Git repository is in a clean state, with all relevant changes committed and no untracked files that are part of the submission. The \t\texttt{.gitignore} file should effectively exclude build artifacts.
+    \item \t\textbf{Comprehensive Documentation:} Verify that the \t\texttt{README.md} at the project root and any in-line comments in code or skill definitions provide sufficient information for understanding, running, and evaluating the project.
+    \item \t\textbf{Adherence to Assignment Constraints:} Double-check all strict rules, such as "modify only \t\texttt{ex04/main.tex}", "no new LaTeX packages", and "no Hebrew text", have been rigorously followed.
+    \item \t\textbf{Included Logs and Reports:} Ensure that \t\texttt{ex04/logs/generation\_log.md} and \t\texttt{ex04/logs/qa\_report.md} are current and included, providing a summary of agent activities and quality checks.
+    \item \t\textbf{Dependency Manifest:} Confirm \t\texttt{requirements.txt} is present and accurately lists all Python package dependencies required for the agent scripts.
+    \item \t\textbf{Clarity of Purpose:} The entire submission clearly articulates the assignment's objectives, the agentic architecture, and the methodologies employed, as detailed in the main body and appendices of the report.
 \end{itemize}
 This dual focus on reproducibility and submission readiness ensures that the project not only delivers a high-quality academic report but also provides a transparent and verifiable account of its automated generation process.
 
-\newpage
+\n\newpage
 \section{Appendix G: Submission Quality Review}
 
 A final quality review is an essential part of an agentic document generation workflow. The purpose of this review is to verify that the project is not only technically present in the repository, but also understandable, reproducible, and aligned with the assignment requirements. In this submission, the review focuses on the relationship between the planning documents, the LaTeX source file, the custom class template, the generated PDF, the skills, and the quality assurance materials.
@@ -660,7 +660,7 @@ The second review dimension is reproducibility. The PDF is not only uploaded as 
 
 The third review dimension is evidence. The repository includes logs, quality assurance materials, and skill definitions. These files show that the workflow was treated as an agentic process rather than as a single static writing task. The evidence makes the submission easier to audit and helps connect the final PDF to the process that produced it.
 
-\newpage
+\n\newpage
 \section{Appendix H: Evaluation Rubric Mapping}
 
 A strong submission can be evaluated by mapping each expected requirement to a visible artifact in the repository. The product requirement document explains the goal and scope of the assignment. The plan describes the work process. The task checklist translates the plan into concrete execution items. The README files explain the project to an external evaluator. Together, these documents create a clear path from requirements to implementation.
@@ -671,7 +671,7 @@ The skills directory represents the agentic layer of the assignment. Each skill 
 
 The quality assurance script provides an automated validation layer. It checks whether required files and folders exist and gives a clear result. Although the script is intentionally simple, it demonstrates the principle that generated work should be evaluated before submission.
 
-\newpage
+\n\newpage
 \section{Appendix I: Risk Review and Mitigation}
 
 One risk in this type of project is that the final document may become disconnected from the repository structure. This risk is mitigated by describing the repository components inside the report and by maintaining README files that explain the same structure from a practical perspective. The report and the repository therefore support each other.
@@ -682,7 +682,7 @@ A third risk is over-reliance on automatic generation. Agentic tools can produce
 
 A fourth risk is unclear grading evidence. A repository can contain many files, but without documentation the evaluator may not understand their purpose. The README files, logs, skills, and QA materials are included to make the submission legible, auditable, and easier to evaluate.
 
-\newpage
+\n\newpage
 \section{Appendix J: Final Readiness Statement}
 
 The project is ready for submission when several conditions are satisfied. First, the planning documents must exist and clearly explain the assignment goals. Second, the LaTeX source and custom class file must exist and compile successfully. Third, the generated PDF must be included in the repository. Fourth, the README files must explain the purpose, structure, setup process, limitations, and expected output.
