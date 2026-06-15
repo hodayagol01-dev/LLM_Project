@@ -30,9 +30,8 @@ This folder contains the final implementation for Assignment 04: an agentic LaTe
 ## Setup Instructions
 
 1.  **Install Dependencies:**
-    Ensure you have Python 3.x installed. Install the project dependencies using pip:
+    Ensure you have Python 3.x installed. No external Python dependencies are required for the current QA and compilation scripts.
     ```bash
-    # No external Python dependencies required
     ```
 2.  **Install LuaLaTeX:**
     Compilation of the LaTeX document requires a local installation of LuaLaTeX. Please follow the instructions for your operating system to install TeX Live or MiKTeX, which includes LuaLaTeX.
