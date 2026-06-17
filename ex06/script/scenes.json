@@ -1,0 +1,109 @@
+[
+  {
+    "sceneId": "anxiety_apartment_night",
+    "startTimeSeconds": 0,
+    "durationSeconds": 10,
+    "description": "Student is overwhelmed by a laptop screen displaying a complex academic assignment. Room is cluttered, lighting is dim, reflecting stress.",
+    "visualElements": [
+      "Student hunched over laptop, disheveled, stressed expression",
+      "Laptop screen with dense academic assignment brief",
+      "Scattered textbooks, crumpled papers",
+      "Blur effect around student"
+    ],
+    "audioElements": [
+      "Frantic keyboard typing (Foley)",
+      "Nervous sighs (Foley)",
+      "Narrator V.O.: 'Feeling overwhelmed by a mountain of assignments?'",
+      "Tense, slightly dissonant background music begins"
+    ],
+    "dialogue": "Feeling overwhelmed by a mountain of assignments?"
+  },
+  {
+    "sceneId": "anxiety_eyes_closed_transition",
+    "startTimeSeconds": 10,
+    "durationSeconds": 10,
+    "description": "Student closes eyes in deep stress. Room blurs and subtly warps, transitioning to a warm glow.",
+    "visualElements": [
+      "Student with closed eyes, deep stress",
+      "Room blurring, screen subtly warping, shifting to warm glow"
+    ],
+    "audioElements": [
+      "Background music softens, becomes more ambient",
+      "Narrator V.O.: 'Searching for a moment of calm, a clear path forward?'"
+    ],
+    "dialogue": "Searching for a moment of calm, a clear path forward?"
+  },
+  {
+    "sceneId": "serene_beach_day",
+    "startTimeSeconds": 20,
+    "durationSeconds": 15,
+    "description": "Student stands relaxed on a pristine beach, sunlight on water. She breathes deeply, her expression changing to serene.",
+    "visualElements": [
+      "Student (relaxed posture, simple clothes) on a pristine beach",
+      "Sunlight glinting off ocean water",
+      "Close-up on student's face: serene smile, clear, focused eyes"
+    ],
+    "audioElements": [
+      "Gentle ocean waves (Soundscape)",
+      "Distant seagulls (Soundscape)",
+      "Calming, flowing synth pad music begins, replaces tense music",
+      "Narrator V.O.: 'Imagine finding your clarity. Your peaceful place.'"
+    ],
+    "dialogue": "Imagine finding your clarity. Your peaceful place."
+  },
+  {
+    "sceneId": "shorestep_ai_interface",
+    "startTimeSeconds": 35,
+    "durationSeconds": 10,
+    "description": "Student back at desk, confident. Laptop shows clean ShoreStep AI interface. She inputs assignment, AI processes, structured output displays.",
+    "visualElements": [
+      "Student at desk, upright, confident posture",
+      "Laptop screen with clean, modern ShoreStep AI interface",
+      "Animation of text input (assignment brief)",
+      "Animation of AI processing (subtle loading/thinking visuals)",
+      "Display of structured output: PRD.md, PLAN.md, TODO.md, PROMPTS.md, git-ready folder structure"
+    ],
+    "audioElements": [
+      "Calm, focused keyboard typing (Foley)",
+      "Gentle UI chimes/feedback sounds",
+      "Calming background music continues",
+      "Narrator V.O.: 'Introducing ShoreStep AI. Transform complex assignments into calm, structured action plans.'"
+    ],
+    "dialogue": "Introducing ShoreStep AI. Transform complex assignments into calm, structured action plans."
+  },
+  {
+    "sceneId": "navigating_structured_docs",
+    "startTimeSeconds": 45,
+    "durationSeconds": 10,
+    "description": "Student confidently navigates through generated markdown files on screen, highlighting key sections.",
+    "visualElements": [
+      "Student smiling, nodding confidently",
+      "Laptop screen: scrolling animation through `docs/PRD.md`, `docs/PLAN.md`, `docs/TODO.md`",
+      "Highlighted text: 'User Stories', 'Milestones', 'Action Items'"
+    ],
+    "audioElements": [
+      "Subtle page-turn/scroll sounds (Foley)",
+      "Calming background music continues",
+      "Narrator V.O.: 'From Product Requirements to a crystal-clear TODO list. ShoreStep AI breaks it down, so you can build it up.'"
+    ],
+    "dialogue": "From Product Requirements to a crystal-clear TODO list. ShoreStep AI breaks it down, so you can build it up."
+  },
+  {
+    "sceneId": "climax_and_call_to_action",
+    "startTimeSeconds": 55,
+    "durationSeconds": 5,
+    "description": "Quick alternating shots of confident student and peaceful beach. Final full-screen graphic of ShoreStep AI logo.",
+    "visualElements": [
+      "Quick cut: Student confidently typing",
+      "Quick cut: Peaceful beach scene",
+      "Quick cut: Student smiling, empowered",
+      "Full-screen graphic: ShoreStep AI Logo"
+    ],
+    "audioElements": [
+      "Uplifting, calming music swells slightly",
+      "Narrator V.O.: 'Find your flow. Take the first step. ShoreStep AI.'",
+      "Music fades out"
+    ],
+    "dialogue": "Find your flow. Take the first step. ShoreStep AI."
+  }
+]
