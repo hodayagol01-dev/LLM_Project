@@ -77,3 +77,14 @@ ex05/
 
 ## Security Note
 The `.env` file is used to manage sensitive API keys and should never be committed to the repository. The `.gitignore` file (if present) should include `.env`. This project uses environment variables exclusively to handle credentials.
+
+## Screenshot Proof
+
+A screenshot proving the terminal execution is included here:
+
+![Run proof](screenshots/run_proof.png)
+
+The screenshot shows the CrewAI workflow running from the terminal and completing successfully with:
+- `Final report saved to: output/academic_research_report.md`
+- `Run log saved to: logs/run_log.md`
+
