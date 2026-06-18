@@ -51,3 +51,62 @@ This assignment adheres strictly to the following academic and technical require
 ## Bilingual Awareness (Hebrew/RTL)
 
 While the primary language for documentation and code is English, the project acknowledges the potential for bilingual (e.g., Hebrew) and Right-to-Left (RTL) content in multimedia applications. Future enhancements or specific prompts could explore RTL layout considerations within Remotion components, ensuring the AI agent is capable of generating code that accommodates such requirements.
+
+---
+
+## Final Video
+
+**Video title:** ShoreStep AI — From Assignment Anxiety to Clarity
+
+The final rendered video is available at:
+
+`output/final-video.mp4`
+
+The video presents a 60-second multimedia Vibe Coding story about a student who feels overwhelmed by a complex academic assignment, imagines a calming beach environment, and uses ShoreStep AI to transform assignment chaos into a structured workflow.
+
+## Execution Proof
+
+The project was successfully previewed in Remotion Studio.
+
+A screenshot proving local execution and preview is included at:
+
+`assets/screenshots/remotion_studio_running.png`
+
+## Run Instructions
+
+Install dependencies:
+
+```bash
+npm install
+
+```
+
+Preview the Remotion project:
+
+```bash
+npm run start
+```
+
+Render the final video:
+
+```bash
+npm run build
+```
+
+The render command outputs the final video to:
+
+`output/final-video.mp4`
+
+## Technical Refinement Note
+
+During development, direct local video playback caused browser media playback errors in Remotion Preview. To improve reliability, the project was adapted to use extracted still frames from the video assets with animated Ken Burns motion, gradient overlays, smooth transitions, and product UI cards. This preserved the cinematic concept while making the Remotion preview and final render stable.
+
+## Submission Status
+
+- PRD, PLAN, and TODO files are included under `docs/`.
+- Prompt documentation is included in `docs/PROMPTS.md`.
+- Token and cost awareness is included in `docs/TOKEN_COST_REPORT.md`.
+- QA and rubric mapping are included in `docs/QA_REPORT.md`.
+- The Remotion implementation is included under `src/`.
+- Execution proof is included under `assets/screenshots/`.
+- The final rendered video is included under `output/final-video.mp4`.

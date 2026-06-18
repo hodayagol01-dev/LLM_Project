@@ -1,0 +1,29 @@
+{
+  "name": "shorestep-ai-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio src/index.ts",
+    "build": "remotion render src/index.ts ShoreStepVideo output/final-video.mp4 --concurrency=1 --port=3005",
+    "serve": "remotion preview src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.136",
+    "@remotion/player": "4.0.136",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "4.0.136",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/node": "^18.0.0",
+    "prettier": "^2.8.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "packageManager": "npm@9.6.7"
+}

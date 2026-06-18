@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+.remotion/
+*.log
+.DS_Store
+assets/videos/converted/
+
+assets/videos/
+
+*.mov
+assets/screenshots/*.mov
