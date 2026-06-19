@@ -1,30 +1,50 @@
-# TODO: Assignment 06 - Multimedia Vibe Coding
+# Assignment 06 TODO - Final Completed Checklist
 
-This document outlines the remaining tasks for Assignment 06, following the initial documentation and planning phase.
+## Status
 
-## Phase 2: Scripting & Asset Prompting
+Assignment 06 is completed and ready for submission.
 
-*   [ ] **Refine `script/script.fountain`:** Review and finalize the Fountain script for the 60-second video, ensuring it aligns perfectly with the PRD and narrative flow.
-*   [ ] **Generate `script/scenes.json`:** Create a detailed JSON representation of each scene, including elements, duration, transitions, and any specific visual/audio cues, derived directly from the Fountain script.
-*   [ ] **Develop Music & Sound Prompts:** Craft precise prompts for an AI music/sound generator to create appropriate background music and sound effects (e.g., ocean waves, typing sounds, calm ambient music). Document these in `script/music_prompt.md`.
-*   [ ] **Develop Visual Asset Prompts:** Create prompts for generating necessary visual assets (e.g., student character in different emotional states, a serene beach background, ShoreStep AI UI elements, assignment documents). *Note: This project will focus on programmatic generation or simple placeholders for visual assets within Remotion, rather than external image generation.*
+## Project Setup
 
-## Phase 3: Remotion Code Generation
+- [x] Create `ex06` folder inside the course repository.
+- [x] Create structured documentation folders.
+- [x] Create Remotion project files.
+- [x] Configure package scripts for local preview and final rendering.
+- [x] Keep the project stable by using extracted still frames instead of local video playback.
 
-*   [ ] **Finalize `skills/remotion_video_skill.md`:** Ensure the skill file contains comprehensive and clear instructions for the AI coding agent to generate Remotion code.
-*   [ ] **Prompt AI for Remotion Project Structure:** Use the AI agent (e.g., Gemini) to generate the basic Remotion project structure and core components (e.g., `src/Composition.tsx`, `src/Video.tsx`, utility files).
-*   [ ] **Prompt AI for Scene-Specific Components:** For each scene defined in `script/scenes.json`, prompt the AI to generate corresponding Remotion components (e.g., `src/scenes/AnxietyScene.tsx`, `src/scenes/BeachScene.tsx`).
-*   [ ] **Implement Transitions and Animations:** Guide the AI to create smooth transitions between scenes and dynamic animations for text, characters, and UI elements within each scene.
-*   [ ] **Integrate Text and UI Elements:** Ensure all textual content from the script and simulated ShoreStep AI UI elements are correctly implemented and styled in Remotion components. *Address bilingual/RTL considerations if applicable.*
-*   [ ] **Code Review and Refinement:** Manually review and refine the AI-generated Remotion code for quality, performance, and adherence to Remotion best practices.
+## Documentation Deliverables
 
-## Phase 4: Integration, Rendering & Refinement
+- [x] README.md
+- [x] docs/PRD.md
+- [x] docs/PLAN.md
+- [x] docs/TODO.md
+- [x] docs/PROMPTS.md
+- [x] docs/TOKEN_COST_REPORT.md
+- [x] docs/QA_REPORT.md
+- [x] script/script.fountain
+- [x] script/scenes.json
+- [x] script/music_prompt.md
+- [x] skills/remotion_video_skill.md
 
-*   [ ] **Integrate Multimedia Assets:** Incorporate generated music, sound effects, and visual assets (even placeholders) into the Remotion project.
-*   [ ] **Test Remotion Playback:** Run `npm start` (or equivalent) to preview the video locally and debug any playback, timing, or rendering issues.
-*   [ ] **Render Final Video:** Use Remotion's rendering capabilities to generate the final `output/final-video.mp4`.
-*   [ ] **Capture Screenshots:** Take clear screenshots of the Remotion project running locally (`npm start`) and save them to `assets/screenshots/`.
-*   [ ] **Conduct QA:** Perform a thorough quality assurance check against `docs/QA_REPORT.md` and the assignment rubric.
-*   [ ] **Update `docs/TOKEN_COST_REPORT.md`:** Populate with actual token usage and cost data from the code generation phase.
-*   [ ] **Final `README.md` Update:** Add screenshots and any final project details to `README.md`.
-*   [ ] **GitHub Submission:** Prepare the repository for submission, ensuring all required files are present and documentation is complete and accurate.
+## Multimedia Deliverables
+
+- [x] Create cinematic storyboard.
+- [x] Build emotional flow: stress → beach imagination → calm reset → product clarity → final confidence.
+- [x] Add visual motion using still images, Ken Burns movement, animated overlays, and UI cards.
+- [x] Add product-style ShoreStep AI scene.
+- [x] Add final ending screen.
+- [x] Render final MP4 video.
+- [x] Save rendered output to `output/final-video.mp4`.
+
+## QA and Submission
+
+- [x] Verify that `npm install` works.
+- [x] Verify that `npm run build` renders the final video.
+- [x] Verify that `output/final-video.mp4` is created successfully.
+- [x] Add screenshot proof in `assets/screenshots`.
+- [x] Push final files to GitHub.
+- [x] Confirm that the repository is clean and up to date with `origin/main`.
+
+## Final Note
+
+All required artifacts for Assignment 06 were created, documented, rendered, and pushed to GitHub.

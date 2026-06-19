@@ -1,78 +1,69 @@
-# Token & Cost Awareness Report: Assignment 06
+# Token and Cost Report - Assignment 06
 
-## 1. Introduction
+## Project
 
-This report outlines the methodology for estimating token usage and associated costs for the Large Language Model (LLM) employed in Assignment 06. Understanding and managing token consumption is crucial for efficient and cost-effective AI agent operations, especially in projects involving extensive code and multimedia generation.
+Assignment 06 - Multimedia Vibe Coding  
+Project name: ShoreStep AI  
+Output: Remotion-based 60-second multimedia video
 
-## 2. LLM Used
+## Purpose of This Report
 
-The primary LLM assumed for all text-based generations (documentation, scripts, JSON structures, prompts, and Remotion code) in this project is **Gemini**.
+This report documents the estimated AI usage, prompt iterations, and cost considerations for the multimedia generation workflow.
 
-## 3. Token Estimation Methodology
+The project was developed through a Vibe Coding process: human intent was translated into structured prompts, documentation, script files, scene JSON, Remotion code, QA checks, and a rendered multimedia output.
 
-Token estimation will be approached in two phases:
+## Tools Used
 
-### 3.1. Pre-computation Estimates (Initial Documentation Phase)
+| Tool / Model | Purpose | Cost Type |
+|---|---|---|
+| ChatGPT | Planning, documentation, storyboard refinement, QA thinking | Subscription-based usage |
+| Gemini CLI | Code generation and Remotion project assistance | API / account-based usage |
+| Remotion | Programmatic video rendering | Local execution |
+| GitHub | Version control and submission | Free repository hosting |
+| Local terminal | Build, render, and verification | No token cost |
 
-During the initial documentation and planning phase, estimates are based on:
+## Main Prompt Categories
 
-*   **Document Length:** Approximating the number of words in each markdown file and using an average word-to-token ratio (e.g., 1 word ≈ 1.3 - 1.5 tokens for English, though this can vary by model and language).
-*   **Prompt Complexity:** Estimating tokens for individual prompts based on their length and the amount of context provided (e.g., system instructions, few-shot examples, existing code snippets).
-*   **Structured Output Size:** For JSON and Fountain scripts, estimating based on the expected number of entries, characters, and structural elements.
+| Category | Description | Estimated Usage |
+|---|---|---|
+| Planning prompts | PRD, PLAN, TODO, project scope and requirements | Medium |
+| Story prompts | Script, scene structure, emotional arc, visual direction | Medium |
+| Code prompts | Remotion setup, component structure, rendering fixes | High |
+| QA prompts | Build verification, playback troubleshooting, documentation review | Medium |
+| Refinement prompts | Flow improvement, storyboard polish, final checks | Medium |
 
-**Formula:**
-`Estimated Tokens = (Number of Words * Average Word-to-Token Ratio) + (Prompt Length * Prompt-to-Token Ratio)`
+## Estimated Token Usage
 
-### 3.2. Post-computation Analysis (Execution Phase)
+The exact token count was not exported from all tools, so the following is a reasonable estimate based on the number and size of prompt iterations:
 
-Once the Remotion code and other dynamic outputs are generated, a more precise token count will be performed:
+| Stage | Estimated Tokens |
+|---|---:|
+| Requirements and planning | 8,000 - 12,000 |
+| Script and scene planning | 6,000 - 10,000 |
+| Remotion code generation and debugging | 18,000 - 30,000 |
+| QA and documentation review | 8,000 - 14,000 |
+| Final refinement and GitHub readiness | 6,000 - 10,000 |
 
-*   **API Token Counts:** Utilizing the actual token counts returned by the Gemini API for each prompt and response during the code generation phase. This is the most accurate method.
-*   **Codebase Analysis:** Analyzing the size of the generated Remotion codebase (lines of code, character count) to retroactively estimate input tokens if code was provided as context, and output tokens for the generated code.
+Estimated total usage: **46,000 - 76,000 tokens**
 
-## 4. Cost Estimation
+## Estimated Direct Cost
 
-Cost estimation is derived directly from the token usage and the pricing model of the Gemini LLM. For illustrative purposes, we will use a hypothetical pricing structure (as actual prices can vary).
+No paid per-call OpenAI API billing was used for this assignment.
 
-**Hypothetical Gemini Pricing (Example Rates - consult official documentation for actuals):**
+The work was completed using subscription/account-based AI tools and local rendering. Therefore, the direct incremental cost for this specific assignment is estimated as:
 
-*   **Input Tokens:** \$X per 1,000 tokens
-*   **Output Tokens:** \$Y per 1,000 tokens
+**$0.00 direct API cost**
 
-**Formula:**
-`Total Cost = (Input Tokens / 1000 * Input Token Price) + (Output Tokens / 1000 * Output Token Price)`
+If the same workflow were executed through paid API calls only, the cost would depend on the exact model and token pricing. For this submission, the relevant cost consideration is the estimated token usage and tool workflow rather than direct API billing.
 
-## 5. Token & Cost Optimization Strategies
+## Cost Control Measures
 
-To minimize token usage and costs:
+- Reused a stable Remotion structure instead of regenerating the project repeatedly.
+- Replaced local video playback with extracted still frames to avoid repeated render failures.
+- Performed final rendering locally with Remotion.
+- Limited late-stage changes to focused manual edits instead of broad AI rewrites.
+- Used Git commits to preserve stable versions and avoid losing working states.
 
-*   **Concise Prompts:** Keep prompts as brief and clear as possible without sacrificing necessary context or instructions.
-*   **Targeted Context:** Provide only the essential context to the LLM. Avoid sending entire files if only a small section is relevant.
-*   **Iterative Refinement:** Break down complex tasks into smaller, manageable steps, reducing the size of individual inputs and outputs.
-*   **Structured Outputs:** Request specific, structured outputs (e.g., JSON) to guide the LLM and prevent verbose, unformatted responses.
-*   **Skill Files:** Leverage specialized skill files (like `skills/remotion_video_skill.md`) to embed reusable instructions, reducing the need to repeat them in every prompt.
-*   **Local Processing:** For tasks that don't require advanced reasoning (e.g., simple text transformations, file reformatting), prefer local scripting or tools over LLM calls.
+## Final Assessment
 
-## 6. Estimated Token Usage & Cost (Initial Placeholder)
-
-*Note: These are preliminary estimates based on the current documentation and expected scope. Actual numbers will be updated post-execution.*
-
-| Component                 | Estimated Input Tokens | Estimated Output Tokens | Estimated Cost |
-| :------------------------ | :--------------------- | :---------------------- | :------------- |
-| **Phase 1: Documentation**|
-| README.md (Generation)    | ~500                   | ~1000                   | \$X.XX         |
-| PRD.md (Generation)       | ~300                   | ~700                    | \$X.XX         |
-| PLAN.md (Generation)      | ~400                   | ~800                    | \$X.XX         |
-| TODO.md (Generation)      | ~300                   | ~600                    | \$X.XX         |
-| PROMPTS.md (Generation)   | ~600                   | ~1200                   | \$X.XX         |
-| TOKEN_COST_REPORT.md (Gen)| ~500                   | ~1000                   | \$X.XX         |
-| QA_REPORT.md (Generation) | ~400                   | ~800                    | \$X.XX         |
-| Script.fountain (Generation)| ~700                   | ~1500                   | \$X.XX         |
-| Scenes.json (Generation)  | ~600                   | ~1200                   | \$X.XX         |
-| Music_prompt.md (Gen)     | ~200                   | ~400                    | \$X.XX         |
-| Remotion_video_skill.md (Gen)| ~800                   | ~1600                   | \$X.XX         |
-| **Phase 3: Code Generation**|
-| Remotion Components (Iterative) | ~5000 (total over many turns) | ~10000 (total over many turns) | \$X.XX         |
-| **Total Estimated (Preliminary)**| **~10300**             | **~20800**              | **\$YY.YY**    |
-
-*Note: The cost values (\$X.XX, \$YY.YY) are placeholders. Actual costs will depend on the final token usage and the prevailing Gemini API pricing.*
+The project demonstrates controlled AI-assisted multimedia development with a reasonable token footprint. Most AI usage was concentrated in code generation, debugging, and storyboard refinement. The final rendered output was produced locally and committed to GitHub.
